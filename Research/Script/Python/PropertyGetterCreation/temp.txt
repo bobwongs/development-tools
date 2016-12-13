@@ -1,0 +1,70 @@
+- (UIScrollView *)scrollView {
+   if (!_scrollView) {
+
+   }
+   return _scrollView;
+}
+
+- (UIView *)viewTop {
+   if (!_viewTop) {
+
+   }
+   return _viewTop;
+}
+
+- (UILabel *)lbCompanyDesc {
+   if (!_lbCompanyDesc) {
+
+   }
+   return _lbCompanyDesc;
+}
+
+- (UILabel *)lbCompany {
+   if (!_lbCompany) {
+
+   }
+   return _lbCompany;
+}
+
+- (UIView *)viewLine {
+   if (!_viewLine) {
+
+   }
+   return _viewLine;
+}
+
+- (UILabel *)lbOrderDesc {
+   if (!_lbOrderDesc) {
+
+   }
+   return _lbOrderDesc;
+}
+
+- (UILabel *)lbOrder {
+   if (!_lbOrder) {
+
+   }
+   return _lbOrder;
+}
+
+- (UIView *)viewRemark {
+   if (!_viewRemark) {
+
+   }
+   return _viewRemark;
+}
+
+- (UILabel *)lbRemarkDesc {
+   if (!_lbRemarkDesc) {
+
+   }
+   return _lbRemarkDesc;
+}
+
+- (UILabel *)lbRemark {
+   if (!_lbRemark) {
+
+   }
+   return _lbRemark;
+}
+

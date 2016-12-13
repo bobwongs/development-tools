@@ -1,0 +1,12 @@
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+@property (nonatomic, strong) UIView *viewTop;  ///< 顶部View
+@property (nonatomic, strong) UILabel *lbCompanyDesc;  ///< 快递公司描述
+@property (nonatomic, strong) UILabel *lbCompany;  ///< 快递公司
+@property (nonatomic, strong) UIView *viewLine;  ///< 线条
+@property (nonatomic, strong) UILabel *lbOrderDesc;  ///< 快递单号描述
+@property (nonatomic, strong) UILabel *lbOrder;  ///< 快递单号
+
+@property (nonatomic, strong) UIView *viewRemark;  ///< 备注View
+@property (nonatomic, strong) UILabel *lbRemarkDesc;  ///< 备注描述
+@property (nonatomic, strong) UILabel *lbRemark;  ///< 备注
