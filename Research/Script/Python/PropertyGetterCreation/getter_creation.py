@@ -24,7 +24,8 @@ def createGetter(str):
 def createAddToSuperView(str):
     (type, object) = getTypeAndObject(str)
     output = (
-              '[<#view#> addSubview:' + '<#view#>.' + object + '];'
+#              '[<#view#> addSubview:' + '<#view#>.' + object + '];'
+              '[<#view#> addSubview:' + '_' + object + '];'
               )
     return output
 
@@ -32,7 +33,7 @@ def createAddToSuperView(str):
 def createMasonry(str):
     (type, object) = getTypeAndObject(str)
     output = (
-              '[<#view#> mas_makeConstraints:^(MASConstraintMaker *make) {\n' +
+              '[_' + object + ' mas_makeConstraints:^(MASConstraintMaker *make) {\n' +
               '    make.left.mas_equalTo(<#CGFloat#>);\n' +
               '    make.right.mas_equalTo(<#CGFloat#>);\n' +
               '    make.top.mas_equalTo(<#CGFloat#>);\n' +
