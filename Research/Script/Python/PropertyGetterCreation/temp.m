@@ -1,90 +1,296 @@
 Getter:
-- (UIImageView *)ivTop {
-   if (!_ivTop) {
-      _ivTop = [UIImageView <#Method#>];
+- (UIScrollView *)scrollView {
+   if (!_scrollView) {
+      _scrollView = [UIScrollView <#Method#>];
    }
-   return _ivTop;
+   return _scrollView;
 }
 
-- (UILabel *)lbPaySuccess {
-   if (!_lbPaySuccess) {
-      _lbPaySuccess = [UILabel <#Method#>];
+- (UIButton *)btnSelectAddress {
+   if (!_btnSelectAddress) {
+      _btnSelectAddress = [UIButton <#Method#>];
    }
-   return _lbPaySuccess;
+   return _btnSelectAddress;
 }
 
-- (UILabel *)lbThanks {
-   if (!_lbThanks) {
-      _lbThanks = [UILabel <#Method#>];
+- (UIImageView *)ivLocationIcon {
+   if (!_ivLocationIcon) {
+      _ivLocationIcon = [UIImageView <#Method#>];
    }
-   return _lbThanks;
+   return _ivLocationIcon;
 }
 
-- (UIButton *)btnContinue {
-   if (!_btnContinue) {
-      _btnContinue = [UIButton <#Method#>];
+- (UILabel *)lbLocation {
+   if (!_lbLocation) {
+      _lbLocation = [UILabel <#Method#>];
    }
-   return _btnContinue;
+   return _lbLocation;
 }
 
-- (UIButton *)btnSeeOrder {
-   if (!_btnSeeOrder) {
-      _btnSeeOrder = [UIButton <#Method#>];
+- (UIImageView *)ivArrow {
+   if (!_ivArrow) {
+      _ivArrow = [UIImageView <#Method#>];
    }
-   return _btnSeeOrder;
+   return _ivArrow;
+}
+
+- (UIView *)viewMiddle {
+   if (!_viewMiddle) {
+      _viewMiddle = [UIView <#Method#>];
+   }
+   return _viewMiddle;
+}
+
+- (UILabel *)lbGetClothesWayDesc {
+   if (!_lbGetClothesWayDesc) {
+      _lbGetClothesWayDesc = [UILabel <#Method#>];
+   }
+   return _lbGetClothesWayDesc;
+}
+
+- (UIButton *)btnGetClothesVisit {
+   if (!_btnGetClothesVisit) {
+      _btnGetClothesVisit = [UIButton <#Method#>];
+   }
+   return _btnGetClothesVisit;
+}
+
+- (UIButton *)btnGetClothesExpress {
+   if (!_btnGetClothesExpress) {
+      _btnGetClothesExpress = [UIButton <#Method#>];
+   }
+   return _btnGetClothesExpress;
+}
+
+- (UIView *)viewGetClothesMsg {
+   if (!_viewGetClothesMsg) {
+      _viewGetClothesMsg = [UIView <#Method#>];
+   }
+   return _viewGetClothesMsg;
+}
+
+- (UILabel *)lbFeeDesc {
+   if (!_lbFeeDesc) {
+      _lbFeeDesc = [UILabel <#Method#>];
+   }
+   return _lbFeeDesc;
+}
+
+- (UILabel *)lbFee {
+   if (!_lbFee) {
+      _lbFee = [UILabel <#Method#>];
+   }
+   return _lbFee;
+}
+
+- (UILabel *)lbSendTip0 {
+   if (!_lbSendTip0) {
+      _lbSendTip0 = [UILabel <#Method#>];
+   }
+   return _lbSendTip0;
+}
+
+- (UILabel *)lbSendTargetPerson {
+   if (!_lbSendTargetPerson) {
+      _lbSendTargetPerson = [UILabel <#Method#>];
+   }
+   return _lbSendTargetPerson;
+}
+
+- (UILabel *)lbSendTargetLocation {
+   if (!_lbSendTargetLocation) {
+      _lbSendTargetLocation = [UILabel <#Method#>];
+   }
+   return _lbSendTargetLocation;
+}
+
+- (UILabel *)lbRemarkDesc {
+   if (!_lbRemarkDesc) {
+      _lbRemarkDesc = [UILabel <#Method#>];
+   }
+   return _lbRemarkDesc;
+}
+
+- (UILabel *)lbRemark {
+   if (!_lbRemark) {
+      _lbRemark = [UILabel <#Method#>];
+   }
+   return _lbRemark;
+}
+
+- (UIButton *)btnConfirm {
+   if (!_btnConfirm) {
+      _btnConfirm = [UIButton <#Method#>];
+   }
+   return _btnConfirm;
 }
 
 
 
   setUI:
-_ivTop = [UIImageView <#Method#>];
-_lbPaySuccess = [UILabel <#Method#>];
-_lbThanks = [UILabel <#Method#>];
-_btnContinue = [UIButton <#Method#>];
-_btnSeeOrder = [UIButton <#Method#>];
+_scrollView = [UIScrollView <#Method#>];
+_btnSelectAddress = [UIButton <#Method#>];
+_ivLocationIcon = [UIImageView <#Method#>];
+_lbLocation = [UILabel <#Method#>];
+_ivArrow = [UIImageView <#Method#>];
+_viewMiddle = [UIView <#Method#>];
+_lbGetClothesWayDesc = [UILabel <#Method#>];
+_btnGetClothesVisit = [UIButton <#Method#>];
+_btnGetClothesExpress = [UIButton <#Method#>];
+_viewGetClothesMsg = [UIView <#Method#>];
+_lbFeeDesc = [UILabel <#Method#>];
+_lbFee = [UILabel <#Method#>];
+_lbSendTip0 = [UILabel <#Method#>];
+_lbSendTargetPerson = [UILabel <#Method#>];
+_lbSendTargetLocation = [UILabel <#Method#>];
+_lbRemarkDesc = [UILabel <#Method#>];
+_lbRemark = [UILabel <#Method#>];
+_btnConfirm = [UIButton <#Method#>];
 
-[<#view#> addSubview:_ivTop];
-[<#view#> addSubview:_lbPaySuccess];
-[<#view#> addSubview:_lbThanks];
-[<#view#> addSubview:_btnContinue];
-[<#view#> addSubview:_btnSeeOrder];
+[<#view#> addSubview:_scrollView];
+[<#view#> addSubview:_btnSelectAddress];
+[<#view#> addSubview:_ivLocationIcon];
+[<#view#> addSubview:_lbLocation];
+[<#view#> addSubview:_ivArrow];
+[<#view#> addSubview:_viewMiddle];
+[<#view#> addSubview:_lbGetClothesWayDesc];
+[<#view#> addSubview:_btnGetClothesVisit];
+[<#view#> addSubview:_btnGetClothesExpress];
+[<#view#> addSubview:_viewGetClothesMsg];
+[<#view#> addSubview:_lbFeeDesc];
+[<#view#> addSubview:_lbFee];
+[<#view#> addSubview:_lbSendTip0];
+[<#view#> addSubview:_lbSendTargetPerson];
+[<#view#> addSubview:_lbSendTargetLocation];
+[<#view#> addSubview:_lbRemarkDesc];
+[<#view#> addSubview:_lbRemark];
+[<#view#> addSubview:_btnConfirm];
 
 
   Masonry:
-[_ivTop mas_makeConstraints:^(MASConstraintMaker *make) {
+[_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.mas_equalTo(<#CGFloat#>);
     make.right.mas_equalTo(<#CGFloat#>);
     make.top.mas_equalTo(<#CGFloat#>);
     make.bottom.mas_equalTo(<#CGFloat#>);
 }];
 
-[_lbPaySuccess mas_makeConstraints:^(MASConstraintMaker *make) {
+[_btnSelectAddress mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.mas_equalTo(<#CGFloat#>);
     make.right.mas_equalTo(<#CGFloat#>);
     make.top.mas_equalTo(<#CGFloat#>);
     make.bottom.mas_equalTo(<#CGFloat#>);
 }];
 
-[_lbThanks mas_makeConstraints:^(MASConstraintMaker *make) {
+[_ivLocationIcon mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.mas_equalTo(<#CGFloat#>);
     make.right.mas_equalTo(<#CGFloat#>);
     make.top.mas_equalTo(<#CGFloat#>);
     make.bottom.mas_equalTo(<#CGFloat#>);
 }];
 
-[_btnContinue mas_makeConstraints:^(MASConstraintMaker *make) {
+[_lbLocation mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.mas_equalTo(<#CGFloat#>);
     make.right.mas_equalTo(<#CGFloat#>);
     make.top.mas_equalTo(<#CGFloat#>);
     make.bottom.mas_equalTo(<#CGFloat#>);
 }];
 
-[_btnSeeOrder mas_makeConstraints:^(MASConstraintMaker *make) {
+[_ivArrow mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.mas_equalTo(<#CGFloat#>);
     make.right.mas_equalTo(<#CGFloat#>);
     make.top.mas_equalTo(<#CGFloat#>);
     make.bottom.mas_equalTo(<#CGFloat#>);
 }];
 
+[_viewMiddle mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
 
+[_lbGetClothesWayDesc mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_btnGetClothesVisit mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_btnGetClothesExpress mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_viewGetClothesMsg mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbFeeDesc mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbFee mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbSendTip0 mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbSendTargetPerson mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbSendTargetLocation mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbRemarkDesc mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_lbRemark mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
+
+[_btnConfirm mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.mas_equalTo(<#CGFloat#>);
+    make.right.mas_equalTo(<#CGFloat#>);
+    make.top.mas_equalTo(<#CGFloat#>);
+    make.bottom.mas_equalTo(<#CGFloat#>);
+}];
 
