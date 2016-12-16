@@ -1,1 +1,2 @@
 URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 APIManager: GetExpressCompanyList Interface: GET_EXPRESS_COMPANY_LIST
+URL: washMall/appointment/getExpressInfo Name: 获取快递单详情 APIManager: QueryExpressInfo Interface: QUERY_EXPRESS_INFO

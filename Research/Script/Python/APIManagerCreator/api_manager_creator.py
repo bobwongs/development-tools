@@ -5,7 +5,7 @@
 import os
 import shutil
 
-# Function
+# ---------- Function ----------
 def getTuple(line):
     # URL
     find_words_url = 'URL: '
@@ -22,25 +22,85 @@ def getTuple(line):
     interface = line[line.find(find_words_interface)+len(find_words_interface) : ]
     return (url, name, api_manager, interface)
 
-
-# Main
-def main():
-    dir_name = 'APIManager'
-
+def createApiManager(source):
     url = 'URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 APIManager: GetExpressCompanyList Interface: GET_EXPRESS_COMPANY_LIST'
     (url, name, api_manager, interface) = getTuple(url)
     
-    print url
-    print name
-    print api_manager
-    print interface
+    api_manager_name = 'BM' + api_manager + 'APIManager' #目录名即为APIManager的类名
+    
+    if os.path.exists(api_manager_name):
+        print 'Directory ' + api_manager_name + ' exits'
+        print 'Remove Old APIManager'
+        shutil.rmtree(api_manager_name)
+    #        return
+    
+    os.mkdir(api_manager_name)  #创建目录
 
-    if os.path.exists(dir_name):
-        print 'APIManager exits'
-        return
+# 接口宏定义
+macro_interface_definition = '#define INTERFACE_%s @"%s"  // %s' % (interface, url, name)
+    print macro_interface_definition
+    
+    # 头文件.h
+    file_header_write = open('%s/%s.h' % (api_manager_name, api_manager_name), 'wb', 1)
+    content_header = (
+                      '//\n' +
+                      '//  ' + api_manager_name + '.h\n' +
+                      '//  BMWash\n' +
+                      '//\n' +
+                      '//  Created by BobWong on 16/12/16.\n' +
+                      '//  Copyright © 2016年 月亮小屋（中国）有限公司. All rights reserved.\n' +
+                      '//\n' +
+                      '\n' +
+                      '#import "BMBaseAPIManager.h"\n' +
+                      '\n' +
+                      '@interface %s : BMBaseAPIManager\n' % (api_manager_name) +
+                      '\n' +
+                      '@end\n'
+                      )
+                      file_header_write.write(content_header)
+                      file_header_write.close()
+                      
+                      # 实现文件.m
+                      file_implement_write = open('%s/%s.m' % (api_manager_name, api_manager_name), 'wb', 1)
+                      content_implement = (
+                                           '//\n' +
+                                           '//  ' + api_manager_name + '.m\n' +
+                                           '//  BMWash\n' +
+                                           '//\n' +
+                                           '//  Created by BobWong on 16/12/16.\n' +
+                                           '//  Copyright © 2016年 月亮小屋（中国）有限公司. All rights reserved.\n' +
+                                           '//\n' +
+                                           '\n' +
+                                           '#import "%s.h"\n' % api_manager_name +
+                                           '\n' +
+                                           '@implementation %s\n' % api_manager_name +
+                                           '\n' +
+                                           '- (NSString *)interfaceUrl\n' +
+                                           '{\n' +
+                                           '    return INTERFACE_%s;\n' % interface +
+                                           '}\n' +
+                                           '\n' +
+                                           '- (BOOL)useToken\n' +
+                                           '{\n' +
+                                           '    return YES;\n' +
+                                           '}\n' +
+                                           '\n' +
+                                           '@end\n'
+                                           )
+                      file_implement_write.write(content_implement)
+                      file_implement_write.close()
 
-    os.mkdir(dir_name)
 
+# ------------ Main -------------
+def main():
+    
+    # 读取文件
+    file = open('resource.txt', 'r')  # 这里使用相对路径
+    array_line = file.readlines()
+    file.close()
+    
+
+# ------------Main-------------
 
 
 if __name__=='__main__':
