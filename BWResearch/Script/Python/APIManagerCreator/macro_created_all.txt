@@ -1,0 +1,32 @@
+
+Comment
+
+#define INTERFACE_COMMENT_QUERY_LIST @"washMall/comment/commentQueryList"  // 我的评价列表
+
+
+MoonTicket
+
+#define INTERFACE_MOON_TICKET_GET_TYPE_LIST @"washMall/moonCard/getTypeList"  // 获取月亮券列表
+#define INTERFACE_MOON_TICKET_PURCHASE @"washMall/moonCard/generateOrder"  // 购买月亮券
+#define INTERFACE_MOON_TICKET_QUERY_REMAIN @"washMall/moonCard/queryUserRemain"  // 查询用户余额
+
+
+Payment
+
+#define INTERFACE_PAYMENT_GET_INFO @"washMall/mallPay/getPaymentInfo"  // 支付，获取支付信息（支付页查询支付方式，流水号，支付金额）
+#define INTERFACE_PAYMENT_CONFIRM @"washMall/mallPay/confirmPayment"  // 确认付款
+
+
+Appointment
+
+#define INTERFACE_APPOINTMENT_GET_COLLECT_TYPE @"washMall/appointment/getCollectType"  // 获取收衣方式
+#define INTERFACE_APPOINTMENT_SAVE @"washMall/appointment/saveAppointment"  // 确认预约
+
+
+Address
+
+#define INTERFACE_ADDRESS_GET_LIST @"washMall/user/getAddressList"  // 获得地址本
+#define INTERFACE_ADDRESS_ADD @"washMall/user/addAddress"  // 添加地址
+#define INTERFACE_ADDRESS_UPDATE @"washMall/user/updateAddress"  // 编辑地址
+#define INTERFACE_ADDRESS_SET_DEFAULT @"washMall/user/setDefaultAddress"  // 设置默认地址
+#define INTERFACE_ADDRESS_DELETE @"washMall/user/deleteAddress"  // 删除地址

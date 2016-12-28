@@ -1,0 +1,5 @@
+#define INTERFACE_ADDRESS_GET_LIST @"washMall/user/getAddressList"  // 获得地址本
+#define INTERFACE_ADDRESS_ADD @"washMall/user/addAddress"  // 添加地址
+#define INTERFACE_ADDRESS_UPDATE @"washMall/user/updateAddress"  // 编辑地址
+#define INTERFACE_ADDRESS_SET_DEFAULT @"washMall/user/setDefaultAddress"  // 设置默认地址
+#define INTERFACE_ADDRESS_DELETE @"washMall/user/deleteAddress"  // 删除地址
