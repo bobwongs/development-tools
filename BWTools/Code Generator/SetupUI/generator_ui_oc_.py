@@ -1,6 +1,7 @@
 
 # coding: utf-8
 # author: bobwong
+# run: python generator_ui_oc_.py 
 
 # Definition
 path_support = 'Support'

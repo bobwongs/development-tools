@@ -1,14 +1,27 @@
 
 # coding: utf-8
-# Author: BobWong
-# 脚本运行模板：python api_manager_creator.py ModuleName，ModuleName为模块名
+# author: BobWong
+# run: python generator_api_mananger.py ModuleName, ModuleName:The directory to include the generation
 
 import os
-import shutil
+import shutil  # 文件操作
 import sys
+import time
 
-dir_name = sys.argv[1]
-#dir_name = 'APIManager'
+# ---------- Parameters Setting ----------
+
+path_source = 'Source'
+path_generation = 'Generation'
+path_generation_api_manager = path_generation + '/APIManager'
+copyright_name = 'BobWongStudio'
+project_name = 'BWiOSProject'
+base_api_manager = 'BWBaseAPIManager'
+
+date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
+
+# 创建的APIManager文件目录名称，前者为从输入参数中获取，后者为定值
+#dir_name = sys.argv[1]
+dir_name = 'APIManager'
 
 # ---------- Function ----------
 def getTuple(line):
@@ -30,12 +43,11 @@ def getTuple(line):
 def createAPIManager(source):
     (url, name, api_manager, interface) = getTuple(source)
     
-#    dir_path = 'BMExpress'
-    dir_path = dir_name
+    dir_path = path_generation_api_manager + '/' + dir_name
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
 
-    api_manager_name = 'BM' + api_manager + 'APIManager' #目录名即为APIManager的类名
+    api_manager_name = 'BW' + api_manager + 'APIManager' #目录名即为APIManager的类名
     
     path_api_manager = '%s/%s' % (dir_path, api_manager_name)
     if os.path.exists(path_api_manager):
@@ -50,15 +62,15 @@ def createAPIManager(source):
     content_header = (
                       '//\n' +
                       '//  ' + api_manager_name + '.h\n' +
-                      '//  BMWash\n' +
+                      '//  ' + project_name + '\n' +
                       '//\n' +
-                      '//  Created by BobWong on 16/12/17.\n' +
-                      '//  Copyright © 2016年 月亮小屋（中国）有限公司. All rights reserved.\n' +
+                      '//  Created by BobWong on '+ date_string + '.\n' +
+                      '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
                       '//\n' +
                       '\n' +
-                      '#import "BMBaseAPIManager.h"\n' +
+                      '#import "' + base_api_manager + '.h"\n' +
                       '\n' +
-                      '@interface %s : BMBaseAPIManager\n' % (api_manager_name) +
+                      '@interface ' + api_manager_name +' : ' + base_api_manager + '\n' +
                       '\n' +
                       '@end\n'
                       )
@@ -70,11 +82,10 @@ def createAPIManager(source):
     content_implement = (
                        '//\n' +
                        '//  ' + api_manager_name + '.m\n' +
-                       '//  BMWash\n' +
+                       '//  ' + project_name + '\n' +
                        '//\n' +
-                       '//  Created by BobWong on 16/12/17.\n' +
-                       '//  Copyright © 2016年 月亮小屋（中国）有限公司. All rights reserved.\n' +
-                       '//\n' +
+                       '//  Created by BobWong on '+ date_string + '.\n' +
+                       '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
                        '\n' +
                        '#import "%s.h"\n' % api_manager_name +
                        '\n' +
@@ -105,7 +116,7 @@ def createAPIManager(source):
 def main():
     
     # 读取文件
-    file = open('resource.txt', 'r')  # 这里使用相对路径
+    file = open(path_source + '/source.txt', 'r')  # 这里使用相对路径
     array_line = file.readlines()
     file.close()
 
@@ -116,7 +127,7 @@ def main():
 #        array_macro_interface.append(macro)
         macro_definition = '%s%s\n' % (macro_definition, macro)
 
-    file_macro = open('macro.txt', 'wb', 1)
+    file_macro = open(path_generation + '/generation_interface_definition.txt', 'wb', 1)
     file_macro.write(macro_definition)
     file_macro.close()
 

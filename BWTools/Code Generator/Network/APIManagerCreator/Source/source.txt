@@ -1,0 +1,3 @@
+URL: washMall/user/getAddressList Name: 获得地址本 APIManager: AddressGetList Interface: ADDRESS_GET_LIST
+URL: washMall/user/addAddress Name: 添加地址 APIManager: AddressAdd Interface: ADDRESS_ADD
+URL: washMall/user/updateAddress Name: 编辑地址 APIManager: AddressUpdate Interface: ADDRESS_UPDATE

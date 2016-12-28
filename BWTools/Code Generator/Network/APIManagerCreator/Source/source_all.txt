@@ -1,13 +1,20 @@
 Template Code:
-URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 APIManager: GetExpressCompanyList Interface: GET_EXPRESS_COMPANY_LIST
+    URL: <#Back End Interface#> Name: <#Comment#> APIManager: <#APIManager Name#> Interface: <#INTERFACE_NAME#>
 
-URL: <#Back End Interface#> Name: <#Comment#> APIManager: <#APIManager Name#> Interface: <#INTERFACE_NAME#>
-URL: <#Back End Interface#> Name: <#Comment#> APIManager: <#APIManager Name#> Interface: INTERFACE_<#NAME#>
+Sample Code:
+    URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 APIManager: GetExpressCompanyList Interface: GET_EXPRESS_COMPANY_LIST
+参数解释
+    URL: 接口路径
+    Name: 接口注释名称
+    APIManager: 生成APIManager的文件名
+    Interface: 宏定义接口名
+
 
 
 评价相关
 Comment
 URL: washMall/comment/commentQueryList Name: 我的评价列表 APIManager: CommentQueryList Interface: COMMENT_QUERY_LIST
+
 
 月亮券相关
 MoonTicket
@@ -15,15 +22,18 @@ URL: washMall/moonCard/getTypeList Name: 获取月亮券列表 APIManager: MoonT
 URL: washMall/moonCard/generateOrder Name: 购买月亮券 APIManager: MoonTicketPurchase Interface: MOON_TICKET_PURCHASE
 URL: washMall/moonCard/queryUserRemain Name: 查询用户余额 APIManager: MoonTicketQueryRemain Interface: MOON_TICKET_QUERY_REMAIN
 
+
 支付
 Payment
 URL: washMall/mallPay/getPaymentInfo Name: 支付，获取支付信息（支付页查询支付方式，流水号，支付金额） APIManager: PaymentGetInfo Interface: PAYMENT_GET_INFO
 URL: washMall/mallPay/confirmPayment Name: 确认付款 APIManager: PaymentConfirm Interface: PAYMENT_CONFIRM
 
+
 预约
 Appointment
 URL: washMall/appointment/getCollectType Name: 获取收衣方式 APIManager: AppointmentGetCollectType Interface: APPOINTMENT_GET_COLLECT_TYPE
 URL: washMall/appointment/saveAppointment Name: 确认预约 APIManager: AppointmentSave Interface: APPOINTMENT_SAVE
+
 
 地址管理
 Address
