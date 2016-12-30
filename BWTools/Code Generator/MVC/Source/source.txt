@@ -1,0 +1,4 @@
+VC: Home Title: HomeTitle Comment: HomeComment
+VC: Discovery Title: DiscoveryTitle Comment: DiscoveryComment
+VC: Me Title: MeTitle Comment: MeComment
+VC: More Title: MoreTitle Comment: MoreComment
