@@ -1,8 +1,17 @@
+Keyword
+    VC:
+    Title:
+    Comment:
+
 Template
 VC: <#ViewController#> Title: <#Title#> Comment: <#Comment#>
 
 Sample
 VC: Home Title: Home Comment: 主页
+
+Extension
+    hasTableView, if is tableview, set the tableview protocol and implement corresponding method.
+    hasNavigationBar, if has navigation bar, create the navigation bar method.
 
 Source:
 VC: Home Title: HomeTitle Comment: HomeComment
