@@ -21,7 +21,7 @@ import_file = '#import <UIKit/UIKit.h>'
 base_vc = 'UIViewController'
 
 
-path_source = 'Source'
+path_source_file = 'Source/source.txt'
 
 path_generation = 'Generation'
 path_generation_history = '%s/History' % path_generation
@@ -62,21 +62,21 @@ def generateMVC(Source):
     
     path_vc = '%s/%s' % (path_mvc, vc_name)
     
-    os.mkdir(path_mvc)
+#    os.mkdir(path_mvc)
     os.mkdir(path_vc)
     
     # vc头文件.h
     file_vc_header = open('%s/%s.h' % (path_vc, vc_name), 'wb', 1)
     content_header = (
                       '//\n' +
-                      '//  %s .h\n' % (vc_name) +
+                      '//  %s.h\n' % (vc_name) +
                       '//  %s\n' % (project_name) +
                       '//\n' +
                       '//  Created by BobWong on %s.\n' % (date_string) +
                       '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                       '//\n' +
                       '\n' +
-                      '%s' % (import_file) +
+                      '%s\n' % (import_file) +
                       '\n' +
                       '@interface %s : %s\n' % (vc_name, base_vc) +
                       '\n' +
@@ -89,7 +89,7 @@ def generateMVC(Source):
     file_vc_implement = open('%s/%s.m' % (path_vc, vc_name), 'wb', 1)
     content_implement = (
                          '//\n' +
-                         '//  %s .m\n' % (vc_name) +
+                         '//  %s.m\n' % (vc_name) +
                          '//  %s\n' % (project_name) +
                          '//\n' +
                          '//  Created by BobWong on %s.\n' % (date_string) +
@@ -98,10 +98,9 @@ def generateMVC(Source):
                          '\n' +
                          '#import "%s.h"\n' % vc_name +
                          '\n' +
-                         '@interface %s () <#<>#>' % (vc_name) +
+                         '@interface %s () <#<>#>\n' % (vc_name) +
                          '\n' +
                          '<#Code#>\n' +
-                         '\n' +
                          '\n' +
                          '@end\n'
                          )
@@ -116,8 +115,15 @@ def stripSpace(string):
 # Main
 
 def main():
-    line = 'VC: Home Title: HomeTitle Comment: HomeComment'
-    generateMVC(line)
+    # 读取文件
+    file = open(path_source_file, 'r')  # 这里使用相对路径
+    array_line = file.readlines()
+    file.close()
+    
+    for line in array_line:
+        generateMVC(line)
+
+    print '完成MVC的生成操作'
 
 
 if __name__=='__main__':
