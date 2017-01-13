@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
-		B4B81CE81E28C3FF005D6E0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE71E28C3FF005D6E0A /* ViewController.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
 		B4B81CF81E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CF71E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift */; };
 		B4B81D031E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */; };
+		B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D361E28C71D005D6E0A /* generator_mvc.py */; };
+		B4B81D5E1E28C71D005D6E0A /* generator_ui_oc_.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */; };
+		B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D421E28C71D005D6E0A /* BWMainVC.swift */; };
+		B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */; };
+		B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,6 @@
 /* Begin PBXFileReference section */
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4B81CE71E28C3FF005D6E0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B81CEC1E28C3FF005D6E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4B81CEE1E28C3FF005D6E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,12 @@
 		B4B81CFE1E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWiOSDevelopmentToolsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSDevelopmentToolsSwiftUITests.swift; sourceTree = "<group>"; };
 		B4B81D041E28C400005D6E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B81D361E28C71D005D6E0A /* generator_mvc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_mvc.py; sourceTree = "<group>"; };
+		B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_ui_oc_.py; sourceTree = "<group>"; };
+		B4B81D421E28C71D005D6E0A /* BWMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMainVC.swift; sourceTree = "<group>"; };
+		B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorVC.swift; sourceTree = "<group>"; };
+		B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWUIPropertyGeneratorVC.swift; sourceTree = "<group>"; };
+		B4B81D641E28D1B2005D6E0A /* mvc_source_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mvc_source_all.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */,
-				B4B81CE71E28C3FF005D6E0A /* ViewController.swift */,
-				B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */,
 				B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */,
+				B4B81D101E28C71D005D6E0A /* Generator */,
+				B4B81D3F1E28C71D005D6E0A /* MVC */,
+				B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */,
 				B4B81CEE1E28C3FF005D6E0A /* Info.plist */,
 			);
 			path = BWiOSDevelopmentToolsSwift;
@@ -120,6 +130,138 @@
 				B4B81D041E28C400005D6E0A /* Info.plist */,
 			);
 			path = BWiOSDevelopmentToolsSwiftUITests;
+			sourceTree = "<group>";
+		};
+		B4B81D101E28C71D005D6E0A /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D111E28C71D005D6E0A /* MVC */,
+				B4B81D3A1E28C71D005D6E0A /* SetupUI */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		B4B81D111E28C71D005D6E0A /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D641E28D1B2005D6E0A /* mvc_source_all.txt */,
+				B4B81D361E28C71D005D6E0A /* generator_mvc.py */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B4B81D3A1E28C71D005D6E0A /* SetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */,
+			);
+			path = SetupUI;
+			sourceTree = "<group>";
+		};
+		B4B81D3F1E28C71D005D6E0A /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D401E28C71D005D6E0A /* Main */,
+				B4B81D451E28C71D005D6E0A /* MVCGenerator */,
+				B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B4B81D401E28C71D005D6E0A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D411E28C71D005D6E0A /* Controller */,
+				B4B81D431E28C71D005D6E0A /* Model */,
+				B4B81D441E28C71D005D6E0A /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B4B81D411E28C71D005D6E0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D421E28C71D005D6E0A /* BWMainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4B81D431E28C71D005D6E0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4B81D441E28C71D005D6E0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4B81D451E28C71D005D6E0A /* MVCGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D461E28C71D005D6E0A /* Controller */,
+				B4B81D481E28C71D005D6E0A /* Model */,
+				B4B81D491E28C71D005D6E0A /* View */,
+			);
+			path = MVCGenerator;
+			sourceTree = "<group>";
+		};
+		B4B81D461E28C71D005D6E0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4B81D481E28C71D005D6E0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4B81D491E28C71D005D6E0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D4B1E28C71D005D6E0A /* Controller */,
+				B4B81D4D1E28C71D005D6E0A /* Model */,
+				B4B81D4E1E28C71D005D6E0A /* View */,
+			);
+			path = UIPropertyGenerator;
+			sourceTree = "<group>";
+		};
+		B4B81D4B1E28C71D005D6E0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4B81D4D1E28C71D005D6E0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4B81D4E1E28C71D005D6E0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +376,8 @@
 			files = (
 				B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
+				B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */,
+				B4B81D5E1E28C71D005D6E0A /* generator_ui_oc_.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B81CE81E28C3FF005D6E0A /* ViewController.swift in Sources */,
+				B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */,
 				B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */,
+				B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */,
+				B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
