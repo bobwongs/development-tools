@@ -69,6 +69,8 @@ mvc_module_name = 'MVC'
 
 options, arguments = getopt.getopt(sys.argv[1:], "hc:p:P:a:i:b:m:h:")
 for option, value in options:
+    if isBlank(value):
+        continue
     if option == "-c":
         copyright_name = value
     elif option == "-p":
@@ -153,7 +155,7 @@ def generateMVC(Source):
                       '//  %s.h\n' % (vc_name) +
                       '//  %s\n' % (project_name) +
                       '//\n' +
-                      '//  Created by BobWong on %s.\n' % (date_string) +
+                      '//  Created by %s on %s.\n' % (author_name, date_string) +
                       '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                       '//\n' +
                       '\n' +
@@ -173,7 +175,7 @@ def generateMVC(Source):
                          '//  %s.m\n' % (vc_name) +
                          '//  %s\n' % (project_name) +
                          '//\n' +
-                         '//  Created by BobWong on %s.\n' % (date_string) +
+                         '//  Created by %s on %s.\n' % (author_name, date_string) +
                          '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                          '//\n' +
                          '\n' +
