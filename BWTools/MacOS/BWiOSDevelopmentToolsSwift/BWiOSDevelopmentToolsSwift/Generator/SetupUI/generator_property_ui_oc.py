@@ -1,12 +1,47 @@
 
 # coding: utf-8
-# author: bobwong
-# run: python generator_ui_oc_.py 
+# author: BobWong
+# Use for: Generate UI Property getter and setter method, set UI code, set constraints code
 
-# Definition
-path_support = 'Support'
+' UI Property Generation '
 
-# Function Definition
+__author__ = 'BobWong'
+
+import os
+import getpass
+
+# ---------- Tool ----------
+
+# 非空判断
+def isBlank(string):
+    if string.strip() =='':
+        return True
+    return False
+
+# 去除空格
+def stripSpace(string):
+    return string.replace(' ', '')
+
+# 文件目录判断和创建
+def hasDirectory(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+# 文件判断和创建
+def hasFile(path):
+    if not os.path.exists(path):
+        file = open(path, 'wb', 1)
+        file.close()
+
+# ---------- Parameters Setting ----------
+
+user_name = getpass.getuser()
+
+path_base = '/Users/'+ user_name +'/Desktop/Generator/UIProperty'
+path_source_file = path_base + '/source.txt'
+path_generation_file = path_base + '/generation.txt'
+
+# ---------- Function Definition ----------
 
 # 获得类型和对象，截取字符串
 def getTypeAndObject(str):
@@ -56,14 +91,13 @@ def createInitInSetUI(str):
               )
     return output
 
-
-# ------Main--------
-def main():
+# 生成代码
+def generateUIPropertyCode():
     # 读取文件
-    file = open(path_support + '/source.m', 'r')  # 这里使用相对路径
-    array_line = file.readlines()  # 只能调用一次read类型的方法，可能是读取完之后这里read的指针到了最末尾，再读返回的内容为空
-    file.close()
-
+    file_source = open(path_source_file, 'r')  # 这里使用相对路径
+    array_line = file_source.readlines()  # 只能调用一次read类型的方法，可能是读取完之后这里read的指针到了最末尾，再读返回的内容为空
+    file_source.close()
+    
     # 生成Array
     array_getter = []  # Getter Code Array
     array_addToView = []
@@ -80,43 +114,53 @@ def main():
         array_addToView.append(addToView)
         array_masonry.append(masonry)
         array_initInSetUI.append(initInSetUI)
-
+    
     # 生成Getter
     str_getter = ''  # 所有Getter拼在一起的字符串
     for getter in array_getter:
-    #    print getter, '\n'
-    #    str_getter = str_getter, getter  # 使用此方法不会识别“\n”进行换行
+#        str_getter = str_getter, getter  # 使用此方法不会识别“\n”进行换行
         str_getter = '%s%s\n\n' % (str_getter, getter)  # 使用此方法是可以识别“\n”进行换行
-    #print str_getter
 
     # 生成添加进父视图的方法
     str_setUI = ''
-
     str_initInSetUI = ''
     str_addToView = ''
-
+    
     for initInSetUI in array_initInSetUI:
         str_initInSetUI = '%s%s\n' % (str_initInSetUI, initInSetUI)
     for addToView in array_addToView:
         str_addToView = '%s%s\n' % (str_addToView, addToView)
-
+    
     str_setUI = '%s\n%s' % (str_initInSetUI, str_addToView)
-    #print str_addToView
-
+    
     # 生成约束方法
     str_masonry = ''
     for masonry in array_masonry:
         str_masonry = '%s%s\n' % (str_masonry, masonry)
-    #print str_masonry
 
     # 写入文件
     contentToWrite = 'Getter:\n%s\n\nsetUI:\n%s\n\nMasonry:\n%s' % (str_getter, str_setUI, str_masonry)
-    file_write = open(path_support + '/generation.m', 'wb', 1)
+    file_write = open(path_generation_file, 'wb', 1)
     file_write.write(contentToWrite)
     file_write.close()
 
-    print contentToWrite
+    # 打开生成目录
+    os.system('open -a Xcode %s' % path_generation_file)
 
+    print 'Generate UI property code successfully!'
+
+
+# ---------- Main ----------
+
+def main():
+    # 文件判断和创建
+    hasDirectory(path_base)
+    hasFile(path_source_file)
+    hasFile(path_generation_file)
+    
+    # 生成
+    generateUIPropertyCode()
+    
     return
 # ------Main--------
 

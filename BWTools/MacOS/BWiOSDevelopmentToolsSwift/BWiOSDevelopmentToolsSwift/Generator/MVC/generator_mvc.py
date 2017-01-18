@@ -15,7 +15,7 @@ import shutil
 import getpass
 import getopt
 
-# ---------- 帮助 ----------
+# ---------- Help ----------
 
 def help():
     help = (

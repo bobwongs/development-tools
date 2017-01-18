@@ -53,9 +53,9 @@ class BWMVCGeneratorVC: NSViewController {
         tvMVCSource.string = ""
     }
     
-    @IBAction func btnActionGenerate(_ sender: Any) {
-        
-        // ------------ Set the path parameters for source and generation directory ------------
+    @IBAction func btnActionGenerate(_ sender: Any)
+    {
+        // Set the path parameters for source and generation directory
         let source = tvMVCSource.string
         let pathMVCDir = "\(NSHomeDirectory())/Desktop/Generator/MVC"
         let pathSourceDir = "\(pathMVCDir)/Source"

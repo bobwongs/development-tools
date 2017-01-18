@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Foundation
 
 class BWUIPropertyGeneratorVC: NSViewController {
     
@@ -24,21 +23,21 @@ class BWUIPropertyGeneratorVC: NSViewController {
     @IBAction func btnActionReset(_ sender: AnyObject) {
         tvProperty.string = ""
     }
-    @IBAction func btnActionGenerate(_ sender: AnyObject) {
-        let task = Process()
-        task.launchPath = "/usr/bin/python"
-        task.arguments = ["-c", "print \"hello\""]
+    
+    @IBAction func btnActionGenerate(_ sender: AnyObject)
+    {
+        // Set the file path
+        let source = tvProperty.string
+        let pathUIPropertyDir = "\(NSHomeDirectory())/Desktop/Generator/UIProperty"
+        let pathSource = "\(pathUIPropertyDir)/source.txt"
+        let pathGeneration = "\(pathUIPropertyDir)/generation.txt"
         
-        let outputPipe = Pipe()
-        task.standardInput = Pipe()
-        task.standardOutput = outputPipe
-        task.launch()
-        task.waitUntilExit()
+        // Check file
+        if !hasDirectory(path: pathUIPropertyDir) { return }
+        if !hasFile(path: pathSource) { return }
+        if !hasFile(path: pathGeneration) { }
         
-        
-        let fileHandle = outputPipe.fileHandleForReading
-        let output = NSString.init(data: fileHandle.readDataToEndOfFile(), encoding: String.Encoding.utf8.rawValue)
-        print("Output is \(output)")
+        tvGeneration.string = executePythonScript(scriptInBundle: "generator_property_ui_oc", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: [])
     }
     
     

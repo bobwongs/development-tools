@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		B463D2E21E2F20AA0067D39B /* BWFileSystemTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */; };
 		B463D2E31E2F20AA0067D39B /* BWScriptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */; };
+		B463D2E51E2F513C0067D39B /* source_all_property_ui_oc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */; };
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
 		B4B81CF81E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CF71E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift */; };
 		B4B81D031E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */; };
 		B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D361E28C71D005D6E0A /* generator_mvc.py */; };
-		B4B81D5E1E28C71D005D6E0A /* generator_ui_oc_.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */; };
+		B4B81D5E1E28C71D005D6E0A /* generator_property_ui_oc.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */; };
 		B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D421E28C71D005D6E0A /* BWMainVC.swift */; };
 		B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */; };
 		B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWFileSystemTool.swift; sourceTree = "<group>"; };
 		B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWScriptTool.swift; sourceTree = "<group>"; };
+		B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_property_ui_oc.txt; sourceTree = "<group>"; };
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,11 +55,11 @@
 		B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSDevelopmentToolsSwiftUITests.swift; sourceTree = "<group>"; };
 		B4B81D041E28C400005D6E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B81D361E28C71D005D6E0A /* generator_mvc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_mvc.py; sourceTree = "<group>"; };
-		B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_ui_oc_.py; sourceTree = "<group>"; };
+		B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_property_ui_oc.py; sourceTree = "<group>"; };
 		B4B81D421E28C71D005D6E0A /* BWMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMainVC.swift; sourceTree = "<group>"; };
 		B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorVC.swift; sourceTree = "<group>"; };
 		B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWUIPropertyGeneratorVC.swift; sourceTree = "<group>"; };
-		B4B81D641E28D1B2005D6E0A /* mvc_source_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mvc_source_all.txt; sourceTree = "<group>"; };
+		B4B81D641E28D1B2005D6E0A /* source_all_mvc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_mvc.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +184,8 @@
 		B4B81D111E28C71D005D6E0A /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				B4B81D641E28D1B2005D6E0A /* mvc_source_all.txt */,
 				B4B81D361E28C71D005D6E0A /* generator_mvc.py */,
+				B4B81D641E28D1B2005D6E0A /* source_all_mvc.txt */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -191,7 +193,8 @@
 		B4B81D3A1E28C71D005D6E0A /* SetupUI */ = {
 			isa = PBXGroup;
 			children = (
-				B4B81D3B1E28C71D005D6E0A /* generator_ui_oc_.py */,
+				B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */,
+				B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */,
 			);
 			path = SetupUI;
 			sourceTree = "<group>";
@@ -412,10 +415,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B463D2E51E2F513C0067D39B /* source_all_property_ui_oc.txt in Resources */,
 				B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
 				B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */,
-				B4B81D5E1E28C71D005D6E0A /* generator_ui_oc_.py in Resources */,
+				B4B81D5E1E28C71D005D6E0A /* generator_property_ui_oc.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
