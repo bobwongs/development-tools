@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		B463D2E21E2F20AA0067D39B /* BWFileSystemTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */; };
 		B463D2E31E2F20AA0067D39B /* BWScriptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */; };
-		B463D2E51E2F513C0067D39B /* source_all_property_ui_oc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */; };
+		B463D2EB1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2EA1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift */; };
+		B463D2EE1E2F6CB30067D39B /* BWGlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2ED1E2F6CB30067D39B /* BWGlobalConfig.swift */; };
+		B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F11E2F6E360067D39B /* generator_api_mananger.py */; };
+		B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F31E2F6E360067D39B /* generator_mvc.py */; };
+		B463D2FA1E2F6E360067D39B /* source_all_mvc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F41E2F6E360067D39B /* source_all_mvc.txt */; };
+		B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */; };
+		B463D2FC1E2F6E360067D39B /* source_all_property_ui_oc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F71E2F6E360067D39B /* source_all_property_ui_oc.txt */; };
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
 		B4B81CF81E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CF71E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftTests.swift */; };
 		B4B81D031E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */; };
-		B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D361E28C71D005D6E0A /* generator_mvc.py */; };
-		B4B81D5E1E28C71D005D6E0A /* generator_property_ui_oc.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */; };
 		B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D421E28C71D005D6E0A /* BWMainVC.swift */; };
 		B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */; };
 		B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */; };
@@ -42,7 +46,13 @@
 /* Begin PBXFileReference section */
 		B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWFileSystemTool.swift; sourceTree = "<group>"; };
 		B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWScriptTool.swift; sourceTree = "<group>"; };
-		B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_property_ui_oc.txt; sourceTree = "<group>"; };
+		B463D2EA1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWAPIManagerGeneratorVC.swift; sourceTree = "<group>"; };
+		B463D2ED1E2F6CB30067D39B /* BWGlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWGlobalConfig.swift; sourceTree = "<group>"; };
+		B463D2F11E2F6E360067D39B /* generator_api_mananger.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_api_mananger.py; sourceTree = "<group>"; };
+		B463D2F31E2F6E360067D39B /* generator_mvc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_mvc.py; sourceTree = "<group>"; };
+		B463D2F41E2F6E360067D39B /* source_all_mvc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_mvc.txt; sourceTree = "<group>"; };
+		B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_property_ui_oc.py; sourceTree = "<group>"; };
+		B463D2F71E2F6E360067D39B /* source_all_property_ui_oc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_property_ui_oc.txt; sourceTree = "<group>"; };
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,12 +64,9 @@
 		B4B81CFE1E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWiOSDevelopmentToolsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81D021E28C400005D6E0A /* BWiOSDevelopmentToolsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWiOSDevelopmentToolsSwiftUITests.swift; sourceTree = "<group>"; };
 		B4B81D041E28C400005D6E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4B81D361E28C71D005D6E0A /* generator_mvc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_mvc.py; sourceTree = "<group>"; };
-		B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_property_ui_oc.py; sourceTree = "<group>"; };
 		B4B81D421E28C71D005D6E0A /* BWMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMainVC.swift; sourceTree = "<group>"; };
 		B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorVC.swift; sourceTree = "<group>"; };
 		B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWUIPropertyGeneratorVC.swift; sourceTree = "<group>"; };
-		B4B81D641E28D1B2005D6E0A /* source_all_mvc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_mvc.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +119,82 @@
 			path = ScriptTool;
 			sourceTree = "<group>";
 		};
+		B463D2E61E2F6BA80067D39B /* APIManagerGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2E71E2F6BD20067D39B /* Controller */,
+				B463D2E81E2F6BD20067D39B /* Model */,
+				B463D2E91E2F6BD20067D39B /* View */,
+			);
+			path = APIManagerGenerator;
+			sourceTree = "<group>";
+		};
+		B463D2E71E2F6BD20067D39B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2EA1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B463D2E81E2F6BD20067D39B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B463D2E91E2F6BD20067D39B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B463D2EC1E2F6C9F0067D39B /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2ED1E2F6CB30067D39B /* BWGlobalConfig.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		B463D2EF1E2F6E360067D39B /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2F21E2F6E360067D39B /* MVCGenerator */,
+				B463D2F51E2F6E360067D39B /* UIPropertyGenerator */,
+				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		B463D2F01E2F6E360067D39B /* APIManagerGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2F11E2F6E360067D39B /* generator_api_mananger.py */,
+			);
+			path = APIManagerGenerator;
+			sourceTree = "<group>";
+		};
+		B463D2F21E2F6E360067D39B /* MVCGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2F31E2F6E360067D39B /* generator_mvc.py */,
+				B463D2F41E2F6E360067D39B /* source_all_mvc.txt */,
+			);
+			path = MVCGenerator;
+			sourceTree = "<group>";
+		};
+		B463D2F51E2F6E360067D39B /* UIPropertyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */,
+				B463D2F71E2F6E360067D39B /* source_all_property_ui_oc.txt */,
+			);
+			path = UIPropertyGenerator;
+			sourceTree = "<group>";
+		};
 		B485ED2C1E2E0CE500CA4197 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +228,8 @@
 			children = (
 				B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */,
 				B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */,
-				B4B81D101E28C71D005D6E0A /* Generator */,
+				B463D2EC1E2F6C9F0067D39B /* Global */,
+				B463D2EF1E2F6E360067D39B /* Generator */,
 				B4B81D3F1E28C71D005D6E0A /* MVC */,
 				B485ED2C1E2E0CE500CA4197 /* Common */,
 				B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */,
@@ -172,39 +256,13 @@
 			path = BWiOSDevelopmentToolsSwiftUITests;
 			sourceTree = "<group>";
 		};
-		B4B81D101E28C71D005D6E0A /* Generator */ = {
-			isa = PBXGroup;
-			children = (
-				B4B81D111E28C71D005D6E0A /* MVC */,
-				B4B81D3A1E28C71D005D6E0A /* SetupUI */,
-			);
-			path = Generator;
-			sourceTree = "<group>";
-		};
-		B4B81D111E28C71D005D6E0A /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				B4B81D361E28C71D005D6E0A /* generator_mvc.py */,
-				B4B81D641E28D1B2005D6E0A /* source_all_mvc.txt */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
-		B4B81D3A1E28C71D005D6E0A /* SetupUI */ = {
-			isa = PBXGroup;
-			children = (
-				B4B81D3B1E28C71D005D6E0A /* generator_property_ui_oc.py */,
-				B463D2E41E2F513C0067D39B /* source_all_property_ui_oc.txt */,
-			);
-			path = SetupUI;
-			sourceTree = "<group>";
-		};
 		B4B81D3F1E28C71D005D6E0A /* MVC */ = {
 			isa = PBXGroup;
 			children = (
 				B4B81D401E28C71D005D6E0A /* Main */,
 				B4B81D451E28C71D005D6E0A /* MVCGenerator */,
 				B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */,
+				B463D2E61E2F6BA80067D39B /* APIManagerGenerator */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -415,11 +473,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B463D2E51E2F513C0067D39B /* source_all_property_ui_oc.txt in Resources */,
 				B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */,
+				B463D2FC1E2F6E360067D39B /* source_all_property_ui_oc.txt in Resources */,
+				B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
-				B4B81D5B1E28C71D005D6E0A /* generator_mvc.py in Resources */,
-				B4B81D5E1E28C71D005D6E0A /* generator_property_ui_oc.py in Resources */,
+				B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */,
+				B463D2FA1E2F6E360067D39B /* source_all_mvc.txt in Resources */,
+				B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +509,9 @@
 				B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */,
 				B463D2E31E2F20AA0067D39B /* BWScriptTool.swift in Sources */,
 				B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */,
+				B463D2EB1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift in Sources */,
 				B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */,
+				B463D2EE1E2F6CB30067D39B /* BWGlobalConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

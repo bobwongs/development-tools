@@ -690,7 +690,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-RD-pl1">
-                                <rect key="frame" x="143" y="171" width="102" height="19"/>
+                                <rect key="frame" x="143" y="187" width="102" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="MVC Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obk-qO-5wI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -700,7 +700,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-xM-tP8">
-                                <rect key="frame" x="125" y="126" width="139" height="19"/>
+                                <rect key="frame" x="125" y="142" width="139" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="UI Property Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tAd-fi-MPD">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -709,12 +709,42 @@
                                     <segue destination="epd-yL-eKo" kind="show" id="qEN-rG-NCW"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lDQ-9F-vkN">
+                                <rect key="frame" x="123" y="102" width="143" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="APIManager Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P9Q-Wl-RrU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="J01-KK-TI8" kind="show" id="d9H-7d-KT9"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hya-TN-SKc">
+                                <rect key="frame" x="155" y="62" width="78" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Xcodebuild" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aug-16-zcg">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-d0-AHI">
+                                <rect key="frame" x="139" y="26" width="110" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Verify Certificate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nco-tM-qa5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="A3G-Fe-cE1"/>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="43" id="DAE-rE-f38"/>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="BBL-xM-tP8" secondAttribute="centerX" id="KAT-l7-0eh"/>
-                            <constraint firstItem="BBL-xM-tP8" firstAttribute="top" secondItem="Tsx-RD-pl1" secondAttribute="bottom" constant="27" id="MfB-2Y-Daq"/>
+                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="27" id="1Ww-sU-ETN"/>
+                            <constraint firstItem="BBL-xM-tP8" firstAttribute="top" secondItem="Tsx-RD-pl1" secondAttribute="bottom" constant="27" id="2yJ-UL-v76"/>
+                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="BBL-xM-tP8" secondAttribute="centerX" id="FsB-y1-lfS"/>
+                            <constraint firstItem="lDQ-9F-vkN" firstAttribute="centerX" secondItem="hya-TN-SKc" secondAttribute="centerX" id="JEN-r7-sJd"/>
+                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bzO-AT-tfM"/>
+                            <constraint firstItem="lDQ-9F-vkN" firstAttribute="top" secondItem="BBL-xM-tP8" secondAttribute="bottom" constant="22" id="faH-Xf-Ogx"/>
+                            <constraint firstItem="hya-TN-SKc" firstAttribute="centerX" secondItem="kbi-d0-AHI" secondAttribute="centerX" id="gGC-tp-fM9"/>
+                            <constraint firstItem="BBL-xM-tP8" firstAttribute="centerX" secondItem="lDQ-9F-vkN" secondAttribute="centerX" id="inC-PV-T0g"/>
+                            <constraint firstItem="hya-TN-SKc" firstAttribute="top" secondItem="lDQ-9F-vkN" secondAttribute="bottom" constant="22" id="pwz-ub-cAA"/>
+                            <constraint firstItem="kbi-d0-AHI" firstAttribute="top" secondItem="hya-TN-SKc" secondAttribute="bottom" constant="18" id="xjL-DE-AxU"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -737,7 +767,7 @@
                 </windowController>
                 <customObject id="XDo-St-zBW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="660"/>
+            <point key="canvasLocation" x="-680" y="736"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="u4O-zN-l4x">
@@ -755,7 +785,7 @@
                 </windowController>
                 <customObject id="9ad-pL-2h4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="657"/>
+            <point key="canvasLocation" x="52" y="733"/>
         </scene>
         <!--MVCGenerator-->
         <scene sceneID="xx3-MP-5Je">
@@ -1095,7 +1125,7 @@
                 </viewController>
                 <customObject id="FH2-6Z-VXS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="1127"/>
+            <point key="canvasLocation" x="-680" y="1203"/>
         </scene>
         <!--UI Property Generator-->
         <scene sceneID="sri-OR-QZt">
@@ -1225,7 +1255,155 @@
                 </viewController>
                 <customObject id="fBF-sM-5lh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="1262.5"/>
+            <point key="canvasLocation" x="52" y="1292"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="DvP-lr-50m">
+            <objects>
+                <windowController id="J01-KK-TI8" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="CNQ-Y1-3xv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="232" height="91"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="qQQ-Yk-giu" kind="relationship" relationship="window.shadowedContentViewController" id="fLu-Qc-pjt"/>
+                    </connections>
+                </windowController>
+                <customObject id="1vS-SP-sPH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="733"/>
+        </scene>
+        <!--UI Property Generator-->
+        <scene sceneID="QFB-Aa-FP8">
+            <objects>
+                <viewController title="UI Property Generator" id="qQQ-Yk-giu" customClass="BWAPIManagerGeneratorVC" customModule="BWiOSDevelopmentToolsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="TgK-io-mvu">
+                        <rect key="frame" x="0.0" y="0.0" width="548" height="536"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH6-cV-igs">
+                                <rect key="frame" x="20" y="382" width="508" height="120"/>
+                                <clipView key="contentView" id="d41-B7-pzW">
+                                    <rect key="frame" x="1" y="1" width="506" height="118"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Ogm-Lo-0GG">
+                                            <rect key="frame" x="0.0" y="0.0" width="506" height="118"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="506" height="118"/>
+                                            <size key="maxSize" width="666" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="4kp-bX-toj">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="n7m-8B-bZQ">
+                                    <rect key="frame" x="491" y="1" width="16" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-FD-hcR">
+                                <rect key="frame" x="462" y="355" width="66" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Generate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jQY-WC-W5s">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnActGenerate:" target="qQQ-Yk-giu" id="qQk-kR-qJI"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m4Z-JF-A5F">
+                                <rect key="frame" x="394" y="355" width="47" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Reset" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KWN-8m-JnP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnActReset:" target="qQQ-Yk-giu" id="a9O-Wv-zH1"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oh5-1d-xx6">
+                                <rect key="frame" x="18" y="505" width="120" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="8eM-lc-5je"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APIManager Source:" id="UYb-aZ-QA5">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-ex-11j">
+                                <rect key="frame" x="18" y="333" width="142" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APIManager Generation:" id="i55-JS-aHS">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-TB-nHQ">
+                                <rect key="frame" x="20" y="20" width="508" height="305"/>
+                                <clipView key="contentView" id="erO-Gc-VxP">
+                                    <rect key="frame" x="1" y="1" width="506" height="303"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eXJ-jb-X0l">
+                                            <rect key="frame" x="0.0" y="-1" width="506" height="303"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="506" height="303"/>
+                                            <size key="maxSize" width="666" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="ywv-xh-zTk">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lC4-A5-jZU">
+                                    <rect key="frame" x="491" y="1" width="16" height="303"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pIi-TB-nHQ" secondAttribute="bottom" constant="20" symbolic="YES" id="3Cp-CQ-en8"/>
+                            <constraint firstItem="pH6-cV-igs" firstAttribute="trailing" secondItem="Zfy-FD-hcR" secondAttribute="trailing" id="5dZ-R1-eYB"/>
+                            <constraint firstItem="Zfy-FD-hcR" firstAttribute="trailing" secondItem="pIi-TB-nHQ" secondAttribute="trailing" id="6q1-s0-Wk6"/>
+                            <constraint firstItem="pIi-TB-nHQ" firstAttribute="top" secondItem="l1T-ex-11j" secondAttribute="bottom" constant="8" symbolic="YES" id="9IX-dv-9t6"/>
+                            <constraint firstItem="Oh5-1d-xx6" firstAttribute="leading" secondItem="pH6-cV-igs" secondAttribute="leading" id="CPH-kD-zL1"/>
+                            <constraint firstItem="l1T-ex-11j" firstAttribute="top" secondItem="pH6-cV-igs" secondAttribute="bottom" constant="32" id="DsB-df-2Q0"/>
+                            <constraint firstItem="pIi-TB-nHQ" firstAttribute="top" secondItem="m4Z-JF-A5F" secondAttribute="bottom" constant="31" id="Lhy-E6-akH"/>
+                            <constraint firstItem="Oh5-1d-xx6" firstAttribute="leading" secondItem="TgK-io-mvu" secondAttribute="leading" constant="20" symbolic="YES" id="T2J-Za-Ped"/>
+                            <constraint firstItem="pH6-cV-igs" firstAttribute="top" secondItem="Oh5-1d-xx6" secondAttribute="bottom" constant="3" id="TdL-8D-sxU"/>
+                            <constraint firstItem="Zfy-FD-hcR" firstAttribute="leading" secondItem="m4Z-JF-A5F" secondAttribute="trailing" constant="21" id="Yqf-ha-s9f"/>
+                            <constraint firstItem="m4Z-JF-A5F" firstAttribute="top" secondItem="pH6-cV-igs" secondAttribute="bottom" constant="8" symbolic="YES" id="bCs-GP-odh"/>
+                            <constraint firstAttribute="trailing" secondItem="pH6-cV-igs" secondAttribute="trailing" constant="20" symbolic="YES" id="cLU-Kp-WsA"/>
+                            <constraint firstItem="Zfy-FD-hcR" firstAttribute="baseline" secondItem="m4Z-JF-A5F" secondAttribute="firstBaseline" id="eTl-tU-tqe"/>
+                            <constraint firstItem="pH6-cV-igs" firstAttribute="leading" secondItem="l1T-ex-11j" secondAttribute="leading" id="gzn-W8-Ep1"/>
+                            <constraint firstItem="l1T-ex-11j" firstAttribute="leading" secondItem="pIi-TB-nHQ" secondAttribute="leading" id="igh-Nj-0Wc"/>
+                            <constraint firstItem="Oh5-1d-xx6" firstAttribute="top" secondItem="TgK-io-mvu" secondAttribute="top" constant="14" id="jxF-3w-u2F"/>
+                            <constraint firstItem="m4Z-JF-A5F" firstAttribute="top" secondItem="TgK-io-mvu" secondAttribute="top" constant="162" id="qIr-18-MRO"/>
+                            <constraint firstItem="m4Z-JF-A5F" firstAttribute="baseline" secondItem="Zfy-FD-hcR" secondAttribute="baseline" id="tT1-Rk-hXm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="svGeneration" destination="pIi-TB-nHQ" id="u1O-58-Wuc"/>
+                        <outlet property="svSource" destination="pH6-cV-igs" id="aoe-rl-G9t"/>
+                    </connections>
+                </viewController>
+                <customObject id="NfI-PL-AnB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="1188"/>
         </scene>
     </scenes>
 </document>

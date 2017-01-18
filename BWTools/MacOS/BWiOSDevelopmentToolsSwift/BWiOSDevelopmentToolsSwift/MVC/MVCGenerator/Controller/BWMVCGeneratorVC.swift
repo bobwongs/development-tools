@@ -8,15 +8,6 @@
 
 import Cocoa
 
-let kCopyRight = "kCopyRight"
-let kProject = "kProject"
-let kAuthor = "kAuthor"
-let kPrefix = "kPrefix"
-let kImportFile = "kImportFile"
-let kBasicVC = "kBasicVC"
-let kModule = "kModule"
-
-
 class BWMVCGeneratorVC: NSViewController {
     
     // MARK: UI
