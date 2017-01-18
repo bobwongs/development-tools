@@ -12,26 +12,31 @@ import re
 import time
 import os
 import shutil
+import getpass
 
 # ---------- Parameters Setting ----------
+
+user_name = getpass.getuser()
 
 project_name = 'BWiOSProject'
 copyright_name = 'BobWongStudio'
 prefix_name = 'BW'
-author_name = 'BobWong'
+author_name = user_name
 import_file = '#import <UIKit/UIKit.h>'
 base_vc = 'UIViewController'
 mvc_module_name = 'MVC'
 #mvc_module_name = sys.argv[1]
 
+path_base = '/Users/'+ user_name +'/Desktop/Generator/MVC'
 
-path_base = '/Users/BobWong/Desktop/Generator/MVC'
-path_source_file = path_base + '/Source/source.txt'
+path_source_dir = path_base + '/Source'
+path_source_file = path_source_dir + '/source.txt'
 
 path_generation = path_base + '/Generation'
 path_generation_history = '%s/History' % path_generation
-path_temp = '%s/Temporary' % path_generation
-path_mvc = '%s/%s' % (path_temp, mvc_module_name)
+path_generation_temp = '%s/Temporary' % path_generation
+path_mvc = '%s/%s' % (path_generation_temp, mvc_module_name)
+path_generation_file = '%s/generation.txt' % path_generation
 
 name_controller = 'Controller'
 name_model = 'Model'
@@ -186,10 +191,28 @@ def generateMVC(Source):
 def stripSpace(string):
     return string.replace(' ', '')
 
+# 文件目录判断和创建
+def hasDirectory(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+# 文件判断和创建
+def hasFile(path):
+    if not os.path.exists(path):
+        file = open(path, 'wb', 1)
+        file.close()
+
 
 # Main
 
 def main():
+    # 文件判断和创建
+    hasDirectory(path_source_dir)
+    hasFile(path_source_file)
+    
+    hasDirectory(path_generation_temp)
+    hasDirectory(path_generation_history)
+    hasFile(path_generation_file)
     
     # 读取文件
     file = open(path_source_file, 'r')  # 这里使用相对路径
@@ -212,6 +235,7 @@ def main():
         generateMVC(line)
 
     print 'MVC Generation Finished'
+    os.system('open %s' % path_generation_temp)
 
 
 if __name__=='__main__':

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B485ED311E2E0D7200CA4197 /* BWScriptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485ED301E2E0D7200CA4197 /* BWScriptTool.swift */; };
+		B485ED341E2E11B600CA4197 /* BWFileSystemTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485ED331E2E11B600CA4197 /* BWFileSystemTool.swift */; };
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B485ED301E2E0D7200CA4197 /* BWScriptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWScriptTool.swift; sourceTree = "<group>"; };
+		B485ED331E2E11B600CA4197 /* BWFileSystemTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWFileSystemTool.swift; sourceTree = "<group>"; };
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B485ED2C1E2E0CE500CA4197 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B485ED321E2E11A700CA4197 /* FileSystemTool */,
+				B485ED2D1E2E0D1900CA4197 /* ScriptTool */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B485ED2D1E2E0D1900CA4197 /* ScriptTool */ = {
+			isa = PBXGroup;
+			children = (
+				B485ED301E2E0D7200CA4197 /* BWScriptTool.swift */,
+			);
+			path = ScriptTool;
+			sourceTree = "<group>";
+		};
+		B485ED321E2E11A700CA4197 /* FileSystemTool */ = {
+			isa = PBXGroup;
+			children = (
+				B485ED331E2E11B600CA4197 /* BWFileSystemTool.swift */,
+			);
+			path = FileSystemTool;
+			sourceTree = "<group>";
+		};
 		B4B81CD91E28C3FF005D6E0A = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +137,7 @@
 				B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */,
 				B4B81D101E28C71D005D6E0A /* Generator */,
 				B4B81D3F1E28C71D005D6E0A /* MVC */,
+				B485ED2C1E2E0CE500CA4197 /* Common */,
 				B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */,
 				B4B81CEE1E28C3FF005D6E0A /* Info.plist */,
 			);
@@ -403,7 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */,
+				B485ED341E2E11B600CA4197 /* BWFileSystemTool.swift in Sources */,
 				B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */,
+				B485ED311E2E0D7200CA4197 /* BWScriptTool.swift in Sources */,
 				B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */,
 				B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */,
 			);
@@ -651,6 +683,7 @@
 				B4B81D091E28C400005D6E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B81D0A1E28C400005D6E0A /* Build configuration list for PBXNativeTarget "BWiOSDevelopmentToolsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +692,7 @@
 				B4B81D0C1E28C400005D6E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B81D0D1E28C400005D6E0A /* Build configuration list for PBXNativeTarget "BWiOSDevelopmentToolsSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +701,7 @@
 				B4B81D0F1E28C400005D6E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

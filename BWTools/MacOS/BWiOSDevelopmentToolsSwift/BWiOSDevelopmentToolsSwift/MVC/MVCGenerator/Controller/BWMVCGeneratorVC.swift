@@ -1,6 +1,6 @@
 //
 //  BWMVCGeneratorVC.swift
-//  BWMacOSStudySwift
+//  BWiOSDevelopmentToolsSwift
 //
 //  Created by BobWong on 17/1/13.
 //  Copyright © 2017年 BobWongStudio. All rights reserved.
@@ -27,49 +27,20 @@ class BWMVCGeneratorVC: NSViewController {
     
     @IBAction func btnActionGenerate(_ sender: Any) {
         
-        // ------------ Set the source ------------
-        // ------------ <#Comment#> ------------
+        // ------------ Set the path parameters for source and generation directory ------------
         let source = tvMVCSource.string
-        let path_source = "\(NSHomeDirectory())/Desktop/Generator/MVC/Source/source.txt"
-        let path_generation = "\(NSHomeDirectory())/Desktop/Generator/MVC/Generation/generation.txt"
+        let pathMVCDir = "\(NSHomeDirectory())/Desktop/Generator/MVC"
+        let pathSourceDir = "\(pathMVCDir)/Source"
+        let pathGenerationDir = "\(pathMVCDir)/Generation"
         
-        do {
-            // replace all content in source file
-            try source?.write(toFile: path_source, atomically: false, encoding: String.Encoding.utf8)
-        }
-        catch {
-            print("MVC Source Write Error!")
-        }
+        let pathSource = "\(pathSourceDir)/source.txt"
+        let pathGeneration = "\(pathGenerationDir)/generation.txt"
         
-        // ------------ Execute python script ------------
-        guard let path = Bundle.main.path(forResource: "generator_mvc", ofType: "py") else {
-            print("no BWStudy.sh path")
-            return
-        }
+        // If there not has file, create
+        if !hasDirectory(path: pathSourceDir) { return }
+        if !hasFile(path: pathSource) { return }
         
-        let task = Process()
-        task.launchPath = "/usr/bin/python"
-        task.arguments = [path]
-        
-        let outputPipe = Pipe()
-        task.standardInput = Pipe()
-        task.standardOutput = outputPipe
-        task.launch()
-        task.waitUntilExit()
-        
-        
-        let fileHandle = outputPipe.fileHandleForReading
-        let output = NSString.init(data: fileHandle.readDataToEndOfFile(), encoding: String.Encoding.utf8.rawValue)
-        print("Output is \(output)")
-        
-        
-        // ------------ Write the result ------------
-        do {
-            let stringGeneration = try NSString.init(contentsOfFile: path_generation, encoding: String.Encoding.utf8.rawValue)
-            tvGeneration.string = stringGeneration as String
-        } catch {
-            
-        }
+        tvGeneration.string = executePythonScript(scriptInBundle: "generator_mvc", sourcePath: pathSource, generationPath: pathGeneration, source: source)
     }
     
     // MARK: Getter and Setter
@@ -86,7 +57,7 @@ class BWMVCGeneratorVC: NSViewController {
 /*
  Mac OS Developmemt Study
     // 可以拼接在文件后头
-    let fileHandleSource = FileHandle.init(forWritingAtPath: path_source)
+    let fileHandleSource = FileHandle.init(forWritingAtPath: pathSource)
     fileHandleSource?.seekToEndOfFile()
     fileHandleSource?.write((source?.data(using: String.Encoding.utf8))!)
     fileHandleSource?.closeFile()
