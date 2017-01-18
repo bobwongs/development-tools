@@ -44,6 +44,7 @@ name_view = 'View'
 
 year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
+time_string = time.strftime("%Y%m%d%H%M%S")
 
 # Function Definition
 
@@ -223,10 +224,13 @@ def main():
     if os.path.exists(path_mvc):
         print 'Directory ' + path_mvc + ' exits!'
         print 'Move Old ' + path_mvc + ' to History!\n'
-        if os.path.exists(path_generation_history + '/' + mvc_module_name):
-            shutil.rmtree(path_mvc)  # 移除
-        else:
-            shutil.move(path_mvc,path_generation_history)  # 移动
+#        if os.path.exists(path_generation_history + '/' + mvc_module_name):
+#            shutil.rmtree(path_mvc)  # 移除
+#        else:
+
+        path_last = path_generation_history + '/%s' % (time_string)
+        hasDirectory(path_last)
+        shutil.move(path_mvc,path_last)  # 移动
 
     # 创建目录
     os.mkdir(path_mvc)
