@@ -13,20 +13,82 @@ import time
 import os
 import shutil
 import getpass
+import getopt
+
+# ---------- 帮助 ----------
+
+def help():
+    help = (
+            'This is help!\n' +
+            'Parameters Usage:\n'
+            '   -c: Copy Right Name\n' +
+            '   -p: Project Name\n' +
+            '   -P: Prefix Name\n' +
+            '   -a: Author Name\n' +
+            '   -i: Import File\n' +
+            '   -b: Basic ViewController\n' +
+            '   -m: Module Name\n' +
+            '   -h: Help'
+            )
+    print help
+
+# ---------- Tool ----------
+
+# 非空判断
+def isBlank(string):
+    if string.strip() =='':
+        return True
+    return False
+
+# 去除空格
+def stripSpace(string):
+    return string.replace(' ', '')
+
+# 文件目录判断和创建
+def hasDirectory(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+# 文件判断和创建
+def hasFile(path):
+    if not os.path.exists(path):
+        file = open(path, 'wb', 1)
+        file.close()
 
 # ---------- Parameters Setting ----------
 
-user_name = getpass.getuser()
-
-project_name = 'BWiOSProject'
+# Basic
 copyright_name = 'BobWongStudio'
+project_name = 'BWiOSProject'
 prefix_name = 'BW'
+user_name = getpass.getuser()
 author_name = user_name
 import_file = '#import <UIKit/UIKit.h>'
 base_vc = 'UIViewController'
 mvc_module_name = 'MVC'
-#mvc_module_name = sys.argv[1]
 
+options, arguments = getopt.getopt(sys.argv[1:], "hc:p:P:a:i:b:m:h:")
+for option, value in options:
+    if option == "-c":
+        copyright_name = value
+    elif option == "-p":
+        project_name = value
+    elif option == "-P":
+        prefix_name = value
+    elif option == "-a":
+        author_name = value
+    elif option == "-i":
+        import_file = value
+    elif option == "-b":
+        base_vc = value
+    elif option == "-m":
+        mvc_module_name = value
+    elif option == "-h":
+        help()
+        sys.exit()
+
+
+# Path
 path_base = '/Users/'+ user_name +'/Desktop/Generator/MVC'
 
 path_source_dir = path_base + '/Source'
@@ -46,7 +108,7 @@ year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
 time_string = time.strftime("%Y%m%d%H%M%S")
 
-# Function Definition
+# ---------- Function Definition ----------
 
 def getTuple(line):
     # ---------Controller----------
@@ -187,31 +249,13 @@ def generateMVC(Source):
     file_view.close()
 
 
-# Tool
-# 去除空格
-def stripSpace(string):
-    return string.replace(' ', '')
-
-# 文件目录判断和创建
-def hasDirectory(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
-
-# 文件判断和创建
-def hasFile(path):
-    if not os.path.exists(path):
-        file = open(path, 'wb', 1)
-        file.close()
-
-
-# Main
+# ---------- Main ----------
 
 def main():
     # 文件判断和创建
     hasDirectory(path_source_dir)
     hasFile(path_source_file)
     
-    hasDirectory(path_generation_temp)
     hasDirectory(path_generation_history)
     hasFile(path_generation_file)
     
@@ -221,26 +265,27 @@ def main():
     file.close()
     
     # 有旧目录
-    if os.path.exists(path_mvc):
-        print 'Directory ' + path_mvc + ' exits!'
-        print 'Move Old ' + path_mvc + ' to History!\n'
-#        if os.path.exists(path_generation_history + '/' + mvc_module_name):
-#            shutil.rmtree(path_mvc)  # 移除
-#        else:
-
+    if os.path.exists(path_generation_temp):
+        print 'Directory ' + path_generation_temp + ' exits!'
+        print 'Move Old ' + path_generation_temp + ' to History!\n'
         path_last = path_generation_history + '/%s' % (time_string)
         hasDirectory(path_last)
-        shutil.move(path_mvc,path_last)  # 移动
+        shutil.move(path_generation_temp,path_last)  # 移动
 
     # 创建目录
+    hasDirectory(path_generation_temp)
     os.mkdir(path_mvc)
     
     for line in array_line:
         generateMVC(line)
 
-    print 'MVC Generation Finished'
-    os.system('open %s' % path_generation_temp)
+    text_success = 'MVC Generation Finished'
+    file_generation = open(path_generation_file, 'wb', 1)
+    file_generation.write(text_success)
+    file_generation.close()
+    print text_success
 
+    os.system('open %s' % path_generation_temp)  # 打开生成目录
 
 if __name__=='__main__':
     main()
