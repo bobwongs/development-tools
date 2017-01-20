@@ -1,14 +1,70 @@
 
 # coding: utf-8
 # author: BobWong
-# run: python generator_api_mananger.py ModuleName, ModuleName:The directory to include the generation
+# use for: Generate APIManager file
+
+' APIManager Generator '
+
+__author__ = 'BobWong'
 
 import os
-import shutil  # 文件操作
+import shutil
 import sys
 import time
+import getpass
+import getopt
+
+# ---------- Help ----------
+
+def help():
+    help = (
+            'This is help!\n' +
+            'Parameters Usage:\n'
+            '   -c: Copy Right Name\n' +
+            '   -p: Project Name\n' +
+            '   -P: Prefix Name\n' +
+            '   -a: Author Name\n' +
+            '   -i: Import File\n' +
+            '   -b: Basic ViewController\n' +
+            '   -m: Module Name\n' +
+            '   -h: Help'
+            )
+    print help
+
+# ---------- Tool ----------
+
+# 非空判断
+def isBlank(string):
+    if string.strip() =='':
+        return True
+    return False
+
+# 去除空格
+def stripSpace(string):
+    return string.replace(' ', '')
+
+# 文件目录判断和创建
+def hasDirectory(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+# 文件判断和创建
+def hasFile(path):
+    if not os.path.exists(path):
+        file = open(path, 'wb', 1)
+        file.close()
 
 # ---------- Parameters Setting ----------
+
+# Basic
+copyright_name = 'BobWongStudio'
+project_name = 'BWiOSProject'
+prefix_name = 'BW'
+user_name = getpass.getuser()
+author_name = user_name
+import_file = '#import <UIKit/UIKit.h>'
+base_vc = 'UIViewController'
+mvc_module_name = 'MVC'
 
 path_source = 'Source'
 path_generation = 'Generation'

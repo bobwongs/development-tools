@@ -1,3 +1,6 @@
-#define INTERFACE_ADDRESS_GET_LIST @"washMall/user/getAddressList"  // 获得地址本
-#define INTERFACE_ADDRESS_ADD @"washMall/user/addAddress"  // 添加地址
-#define INTERFACE_ADDRESS_UPDATE @"washMall/user/updateAddress"  // 编辑地址
+#define INTERFACE_MASTER_VEDIO_GET_LIST @"washMall/washingmaster/video/getList"  // 查询视频组列表
+#define INTERFACE_MASTER_VEDIO_GET_DETAIL @"washMall/washingmaster/video/getDetail"  // 查看视频详情
+#define INTERFACE_MASTER_VEDIO_LIKE @"washMall/washingmaster/video/like"  // 视频点赞
+#define INTERFACE_MASTER_VEDIO_NEWS_GET_LIST @"washMall/washingmaster/consultation/getList"  // 活动资讯列表
+#define INTERFACE_MASTER_VEDIO_STORY_GET_LIST @"washMall/washingmaster/story/getList"  // 大师故事
+#define INTERFACE_MASTER_GET_BANNER_LIST @"washMall/app/getBannerList"  // 获取滚动的banner

@@ -7,21 +7,32 @@ import os
 import shutil  # 文件操作
 import sys
 import time
+import getpass
 
 # ---------- Parameters Setting ----------
 
+# Basic
+copyright_name = '月亮小屋（中国）有限公司'
+project_name = 'BlueMoonHouse'
+prefix_name = 'BM'
+suffix_name = 'APIManager'
+user_name = getpass.getuser()
+author_name = user_name
+import_file = '#import "BMBaseAPIManager.h"'
+base_class = 'BMBaseAPIManager'
+module_name = 'APIManager'
+
 path_source = 'Source'
 path_generation = 'Generation'
-path_generation_api_manager = path_generation + '/APIManager'
-copyright_name = 'BobWongStudio'
-project_name = 'BWiOSProject'
-base_api_manager = 'BWBaseAPIManager'
+path_generation_api_manager = path_generation + '/%s' % module_name
 
-date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
+year_string = time.strftime('%Y')  # 获得当前年份
+date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
+time_string = time.strftime("%Y%m%d%H%M%S")
 
 # 创建的APIManager文件目录名称，前者为从输入参数中获取，后者为定值
 #dir_name = sys.argv[1]
-dir_name = 'APIManager'
+dir_name = module_name
 
 # ---------- Function ----------
 def getTuple(line):
@@ -47,7 +58,7 @@ def createAPIManager(source):
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
 
-    api_manager_name = 'BW' + api_manager + 'APIManager' #目录名即为APIManager的类名
+    api_manager_name = prefix_name + api_manager + suffix_name #目录名即为APIManager的类名
     
     path_api_manager = '%s/%s' % (dir_path, api_manager_name)
     if os.path.exists(path_api_manager):
@@ -64,13 +75,13 @@ def createAPIManager(source):
                       '//  ' + api_manager_name + '.h\n' +
                       '//  ' + project_name + '\n' +
                       '//\n' +
-                      '//  Created by BobWong on '+ date_string + '.\n' +
-                      '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
+                      '//  Created by %s on %s.\n' % (author_name, date_string) +
+                      '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                       '//\n' +
                       '\n' +
-                      '#import "' + base_api_manager + '.h"\n' +
+                      '%s\n' % (import_file) +
                       '\n' +
-                      '@interface ' + api_manager_name +' : ' + base_api_manager + '\n' +
+                      '@interface %s : %s\n' % (api_manager_name, base_class) +
                       '\n' +
                       '@end\n'
                       )
@@ -84,8 +95,8 @@ def createAPIManager(source):
                        '//  ' + api_manager_name + '.m\n' +
                        '//  ' + project_name + '\n' +
                        '//\n' +
-                       '//  Created by BobWong on '+ date_string + '.\n' +
-                       '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
+                       '//  Created by %s on %s.\n' % (author_name, date_string) +
+                       '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                        '\n' +
                        '#import "%s.h"\n' % api_manager_name +
                        '\n' +

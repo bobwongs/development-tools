@@ -67,6 +67,8 @@ import_file = '#import <UIKit/UIKit.h>'
 base_vc = 'UIViewController'
 mvc_module_name = 'MVC'
 
+suffix_vc = 'ViewController'
+
 options, arguments = getopt.getopt(sys.argv[1:], "hc:p:P:a:i:b:m:h:")
 for option, value in options:
     if isBlank(value):
@@ -102,9 +104,10 @@ path_generation_temp = '%s/Temporary' % path_generation
 path_mvc = '%s/%s' % (path_generation_temp, mvc_module_name)
 path_generation_file = '%s/generation.txt' % path_generation
 
-name_controller = 'Controller'
-name_model = 'Model'
-name_view = 'View'
+name_prefix = 'BM'
+name_controller = '%sController' % name_prefix
+name_model = '%sModel' % name_prefix
+name_view = '%sView' % name_prefix
 
 year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
@@ -117,7 +120,7 @@ def getTuple(line):
     find_words_vc = 'VC:'
     find_words_title = 'Title:'
     find_words_comment = 'Comment:'
-    regex = r'%s|%s|%s' % (find_words_vc, find_words_title, find_words_comment)
+    regex = r'%s|%s|%s|\n' % (find_words_vc, find_words_title, find_words_comment)
     array = re.split(regex, line)
     for item in array:
         if item.strip() =='':
@@ -136,7 +139,7 @@ def getTuple(line):
 # 创建VC
 def generateMVC(Source):
     (vc, title, comment) = getTuple(Source)
-    vc_name = '%s%sController' % (prefix_name, vc)
+    vc_name = '%s%s%s' % (prefix_name, vc, suffix_vc)
     
     # 创建vc文件目录
     path_vc = '%s/%s' % (path_mvc, vc_name)
@@ -161,6 +164,9 @@ def generateMVC(Source):
                       '\n' +
                       '%s\n' % (import_file) +
                       '\n' +
+                      '/**\n' +
+                      ' * %s\n' % comment +
+                      ' */\n' +
                       '@interface %s : %s\n' % (vc_name, base_vc) +
                       '\n' +
                       '@end\n'
