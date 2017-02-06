@@ -104,7 +104,7 @@ path_generation_temp = '%s/Temporary' % path_generation
 path_mvc = '%s/%s' % (path_generation_temp, mvc_module_name)
 path_generation_file = '%s/generation.txt' % path_generation
 
-name_prefix = 'BM'
+name_prefix = ''
 name_controller = '%sController' % name_prefix
 name_model = '%sModel' % name_prefix
 name_view = '%sView' % name_prefix
