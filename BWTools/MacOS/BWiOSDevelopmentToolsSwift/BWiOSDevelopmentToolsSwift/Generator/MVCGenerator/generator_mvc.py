@@ -61,13 +61,12 @@ def hasFile(path):
 copyright_name = 'BobWongStudio'
 project_name = 'BWiOSProject'
 prefix_name = 'BW'
+suffix_vc = 'ViewController'
 user_name = getpass.getuser()
 author_name = user_name
 import_file = '#import <UIKit/UIKit.h>'
 base_vc = 'UIViewController'
 mvc_module_name = 'MVC'
-
-suffix_vc = 'ViewController'
 
 options, arguments = getopt.getopt(sys.argv[1:], "hc:p:P:a:i:b:m:h:")
 for option, value in options:

@@ -23,6 +23,7 @@ def help():
             '   -c: Copy Right Name\n' +
             '   -p: Project Name\n' +
             '   -P: Prefix Name\n' +
+            '   -s: Suffix Name\n' +
             '   -a: Author Name\n' +
             '   -i: Import File\n' +
             '   -b: Basic ViewController\n' +
@@ -57,21 +58,65 @@ def hasFile(path):
 # ---------- Parameters Setting ----------
 
 # Basic
-copyright_name = 'BobWongStudio'
-project_name = 'BWiOSProject'
-prefix_name = 'BW'
-user_name = getpass.getuser()
+copyright_name = '月亮小屋（中国）有限公司'
+project_name = 'Bluemoon'
+prefix_name = 'BM'
+suffix_name = 'APIManager'
+user_name = getpass.getuser()  # User Name
 author_name = user_name
-import_file = '#import <UIKit/UIKit.h>'
-base_vc = 'UIViewController'
-mvc_module_name = 'MVC'
+import_file = '#import "BMBaseAPIManager.h"'
+base_class = 'BMBaseAPIManager'
+module_name = 'APIManager'
+
+options, arguments = getopt.getopt(sys.argv[1:], "hc:p:P:a:i:b:m:h:")
+for option, value in options:
+    if isBlank(value):
+        continue
+    if option == "-c":
+        copyright_name = value
+    elif option == "-p":
+        project_name = value
+    elif option == "-P":
+        prefix_name = value
+    elif option == "-s":
+        suffix_name = value
+    elif option == "-a":
+        author_name = value
+    elif option == "-i":
+        import_file = value
+    elif option == "-b":
+        base_vc = value
+    elif option == "-m":
+        mvc_module_name = value
+    elif option == "-h":
+        help()
+        sys.exit()
+
+# Path
+path_base = '/Users/'+ user_name +'/Desktop/Generator/APIManager'
+
+path_source_dir = path_base + '/Source'
+path_source_file = path_source_dir + '/source.txt'
+
+path_generation = path_base + '/Generation'
+path_generation_history = '%s/History' % path_generation
+path_generation_temp = '%s/Temporary' % path_generation
+path_mvc = '%s/%s' % (path_generation_temp, mvc_module_name)
+path_generation_file = '%s/generation.txt' % path_generation
+
+name_prefix = ''
+name_controller = '%sController' % name_prefix
+name_model = '%sModel' % name_prefix
+name_view = '%sView' % name_prefix
+
+year_string = time.strftime('%Y')  # 获得当前年份
+date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
+time_string = time.strftime("%Y%m%d%H%M%S")
+
 
 path_source = 'Source'
 path_generation = 'Generation'
 path_generation_api_manager = path_generation + '/APIManager'
-copyright_name = 'BobWongStudio'
-project_name = 'BWiOSProject'
-base_api_manager = 'BWBaseAPIManager'
 
 date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
 
@@ -124,9 +169,9 @@ def createAPIManager(source):
                       '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
                       '//\n' +
                       '\n' +
-                      '#import "' + base_api_manager + '.h"\n' +
+                      '#import "' + base_class + '.h"\n' +
                       '\n' +
-                      '@interface ' + api_manager_name +' : ' + base_api_manager + '\n' +
+                      '@interface ' + api_manager_name +' : ' + base_class + '\n' +
                       '\n' +
                       '@end\n'
                       )
