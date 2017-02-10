@@ -62,7 +62,7 @@ copyright_name = '月亮小屋（中国）有限公司'
 project_name = 'Bluemoon'
 prefix_name = 'BM'
 suffix_name = 'APIManager'
-user_name = getpass.getuser()  # User Name
+user_name = getpass.getuser()
 author_name = user_name
 import_file = '#import "BMBaseAPIManager.h"'
 base_class = 'BMBaseAPIManager'
@@ -87,7 +87,7 @@ for option, value in options:
     elif option == "-b":
         base_vc = value
     elif option == "-m":
-        mvc_module_name = value
+        module_name = value
     elif option == "-h":
         help()
         sys.exit()
@@ -101,27 +101,20 @@ path_source_file = path_source_dir + '/source.txt'
 path_generation = path_base + '/Generation'
 path_generation_history = '%s/History' % path_generation
 path_generation_temp = '%s/Temporary' % path_generation
-path_mvc = '%s/%s' % (path_generation_temp, mvc_module_name)
+path_module = '%s/%s' % (path_generation_temp, module_name)
 path_generation_file = '%s/generation.txt' % path_generation
-
-name_prefix = ''
-name_controller = '%sController' % name_prefix
-name_model = '%sModel' % name_prefix
-name_view = '%sView' % name_prefix
 
 year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
 time_string = time.strftime("%Y%m%d%H%M%S")
 
 
-path_source = 'Source'
 path_generation = 'Generation'
 path_generation_api_manager = path_generation + '/APIManager'
 
 date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
 
 # 创建的APIManager文件目录名称，前者为从输入参数中获取，后者为定值
-#dir_name = sys.argv[1]
 dir_name = 'APIManager'
 
 # ---------- Function ----------
@@ -215,17 +208,14 @@ def createAPIManager(source):
 
 # ------------ Main -------------
 def main():
-    
     # 读取文件
-    file = open(path_source + '/source.txt', 'r')  # 这里使用相对路径
+    file = open(path_source_dir + '/source.txt', 'r')  # 这里使用相对路径
     array_line = file.readlines()
     file.close()
 
-#    array_macro_interface = []
     macro_definition = ''
     for line in array_line:
         macro = createAPIManager(line)
-#        array_macro_interface.append(macro)
         macro_definition = '%s%s\n' % (macro_definition, macro)
 
     file_macro = open(path_generation + '/generation_interface_definition.txt', 'wb', 1)
@@ -235,6 +225,6 @@ def main():
     print '完成APIManager的生成操作'
 
 
-# ------------Main-------------
+# ------------ Execute Main -------------
 if __name__=='__main__':
     main()
