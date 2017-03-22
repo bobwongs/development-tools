@@ -14,13 +14,13 @@ import getpass
 # Basic
 copyright_name = '月亮小屋（中国）有限公司'
 project_name = 'BlueMoonHouse'
-prefix_name = 'BMService'
-suffix_name = ''
+prefix_name = 'BM'
+suffix_name = 'APIManager'
 user_name = getpass.getuser()
 author_name = user_name
-import_file = '#import "BMService.h"'
-base_class = 'BMService<BMService>'
-module_name = 'BMService'
+import_file = '#import "BMBaseAPIManager.h"'
+base_class = 'BMBaseAPIManager'
+module_name = 'APIManager'
 
 path_source = 'Source'
 path_generation = 'Generation'
@@ -104,27 +104,91 @@ def createAPIManager(source):
                         '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                         '\n' +
                         '#import "%s.h"\n' % api_manager_name +
+                        '#import "BMUserCenter.h"\n' +
+                        '#import "BMConstantMacroMessage.h"\n' +
+                        '\n' +
+                        '@interface %s () <BMAPIManager, BMAPIManagerInterceptor, BMAPIManagerValidator>\n' % api_manager_name +
+                        '\n' +
+                        '@property (nonatomic, copy, readwrite) NSString *errorMessage;\n' +
+                        '\n' +
+                        '@end\n' +
                         '\n' +
                         '@implementation %s\n' % api_manager_name +
                         '\n' +
-                        '- (BOOL)isTestEnvironment\n' +
+                        '#pragma mark - 生命周期\n' +
+                        '\n' +
+                        '- (instancetype)init\n' +
                         '{\n' +
-                        '    return kBMIsTestEnvironment;\n' +
+                        '    self = [super init];\n' +
+                        '    if (self) {\n' +
+                        '        self.validator = self;\n' +
+                        '        self.interceptor = self;\n' +
+                        '    }\n' +
+                        '    return self;\n' +
                         '}\n' +
                         '\n' +
-                        '- (NSString *)formalApiBaseUrl\n' +
+                        '#pragma mark - BMAPIManager manager\n' +
+                        '\n' +
+                        '- (NSString *)methodName\n' +
                         '{\n' +
-                        '    return BASE_URL;\n' +
+                        '    return @"%s";\n' % api_manager_name +
                         '}\n' +
                         '\n' +
-                        '- (NSString *)testApiBasetUrl\n' +
+                        '- (NSString *)serviceIdentifier\n' +
                         '{\n' +
-                        '    return BASE_URL_TEST;\n' +
+                        '    return kBMServiceId%s;\n' % api_manager +
                         '}\n' +
                         '\n' +
-                        '- (NSString *)formalApiInterface\n' +
+                        '- (BMAPIManagerRequestType)requestType\n' +
                         '{\n' +
-                        '    return INTERFACE_%s;\n' % interface +
+                        '    return BMAPIManagerRequestTypeJSONPost;\n' +
+                        '}\n' +
+                        '\n' +
+                        '- (BOOL)shouldCache\n' +
+                        '{\n' +
+                        '    return NO;\n' +
+                        '}\n' +
+                        '\n' +
+                        '#pragma mark - BMAPIManagerValidator 验证器\n' +
+                        '\n' +
+                        '- (BOOL)manager:(BMBaseAPIManager *)manager isCorrectWithCallBackData:(NSDictionary *)data\n' +
+                        '{\n' +
+                        '    if (!isAPICallingSuccess(data)) {\n' +
+                        '        self.errorMessage = getAPICallingResponseMsg(data);\n' +
+                        '        return NO;\n' +
+                        '    }\n' +
+                        '    return YES;\n' +
+                        '}\n' +
+                        '\n' +
+                        '- (BOOL)manager:(BMBaseAPIManager *)manager isCorrectWithParamsData:(NSDictionary *)data\n' +
+                        '{\n' +
+                        '    return YES;\n' +
+                        '}\n' +
+                        '\n' +
+                        '#pragma mark - BMAPIManagerInterceptor 拦截器\n' +
+                        '//是否允许调用api\n' +
+                        '- (BOOL)manager:(BMBaseAPIManager *)manager shouldCallAPIWithParams:(NSDictionary *)params\n' +
+                        '{\n' +
+                        '    if (![BMUserCenter sharedInstance].isLogined) {\n' +
+                        '        self.errorMessage = BMMessageNotAllowCallingAPI;\n' +
+                        '        [[NSNotificationCenter defaultCenter] postNotificationName:BMNOTIFICATION_REQUEST_LOGIN object:@{kBMManager: manager,kBMLoginReason:@(LoginReasonUserLoginAndPrompt)}];\n' +
+                        '        return NO;\n' +
+                        '    }\n' +
+                        '    if (![BMUserCenter sharedInstance].istokenValid) {\n' +
+                        '        [[NSNotificationCenter defaultCenter] postNotificationName:BMNOTIFICATION_REQUEST_LOGIN object:@{kBMManager: manager,kBMLoginReason:@(LoginReasonTokenInvalidAndPrompt)}];\n' +
+                        '        return NO;\n' +
+                        '    }\n' +
+                        '    return YES;\n' +
+                        '}\n' +
+                        '\n' +
+                        '#pragma mark - 重写父类格式化参数方法\n' +
+                        '\n' +
+                        '- (NSDictionary *)reformParams:(NSDictionary *)params\n' +
+                        '{\n' +
+                        '    NSMutableDictionary *mutableParams = params?[[super reformParams:params] mutableCopy]:[[NSMutableDictionary alloc] init];\n' +
+                        '    NSString *token = [BMUserCenter sharedInstance].token;\n' +
+                        '    [mutableParams setObject:token forKey:kBMToken];\n' +
+                        '    return mutableParams;\n' +
                         '}\n' +
                         '\n' +
                         '@end\n'

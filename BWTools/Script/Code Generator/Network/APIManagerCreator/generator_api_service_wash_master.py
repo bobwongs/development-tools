@@ -119,7 +119,11 @@ def createAPIManager(source):
                         '\n' +
                         '- (NSString *)testApiBasetUrl\n' +
                         '{\n' +
+                        '#ifdef kISMockURL\n' +
+                        '    return BASE_URL_MOCK_TEST;\n' +
+                        '#else\n' +
                         '    return BASE_URL_TEST;\n' +
+                        '#endif\n' +
                         '}\n' +
                         '\n' +
                         '- (NSString *)formalApiInterface\n' +
@@ -133,7 +137,24 @@ def createAPIManager(source):
     file_implement_write.close()
 
     # 接口宏定义
-    macro_interface_definition = '#define INTERFACE_%s @"%s"  // %s' % (interface, url, name)
+#    macro_interface_definition = '#define INTERFACE_%s @"%s"  // %s' % (interface, url, name)
+
+    # BMServiceFactory中的文件import
+#    macro_interface_definition = '#import "BMService%s.h"' % api_manager
+
+    # BMServiceFactory中的生成方法
+#    macro_interface_definition = (
+#                                 'if ([serviceIdentifier isEqualToString:kBMServiceId%s]) {\n' % api_manager +
+#                                 '    return [[BMService%s alloc] init];\n' % api_manager +
+#                                 '}'
+#                                  )
+
+    # BMNetworkingConfiguration中的配置
+    macro_interface_definition = 'static NSString * const kBMServiceId%s = @"kBMServiceId%s";  // %s' % (api_manager, api_manager, name)
+
+    # BMRequestGenerator中的签名方式
+#    macro_interface_definition = '[serviceIdentifier isEqualToString:kBMServiceId%s] ||' % api_manager
+
     return macro_interface_definition
 # ---------- Function ----------
 
@@ -153,9 +174,12 @@ def main():
 #        array_macro_interface.append(macro)
         macro_definition = '%s%s\n' % (macro_definition, macro)
 
-    file_macro = open(path_generation + '/generation_interface_definition.txt', 'wb', 1)
+    path_generation_file = path_generation + '/generation_interface_definition.txt'
+    file_macro = open(path_generation_file, 'wb', 1)
     file_macro.write(macro_definition)
     file_macro.close()
+
+    os.system('open -a Xcode %s' % path_generation_file)  # 打开生成目录
 
     print '完成APIManager的生成操作'
 

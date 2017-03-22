@@ -13,7 +13,7 @@ import getpass
 
 # Basic
 copyright_name = '月亮小屋（中国）有限公司'
-project_name = 'BlueMoonHouse'
+project_name = 'BMWash'
 prefix_name = 'BM'
 suffix_name = 'APIManager'
 user_name = getpass.getuser()
@@ -47,7 +47,12 @@ def getTuple(line):
     api_manager = line[line.find(find_words_api_manager)+len(find_words_api_manager) : line.find(' Interface: ')]
     # Interface
     find_words_interface = 'Interface: '
-    interface = line[line.find(find_words_interface)+len(find_words_interface) : line.find('\n')]
+    # 有无\n，有表示最后一行，没有表示不是最后一行
+    if '\n' in line:
+        interface = line[line.find(find_words_interface)+len(find_words_interface) : line.find('\n')]
+    else:
+        interface = line[line.find(find_words_interface)+len(find_words_interface) : ]
+    
     return (url, name, api_manager, interface)
 
 # 创建APIManager，并且返回接口宏定义的代码
@@ -138,9 +143,12 @@ def main():
 #        array_macro_interface.append(macro)
         macro_definition = '%s%s\n' % (macro_definition, macro)
 
-    file_macro = open(path_generation + '/generation_interface_definition.txt', 'wb', 1)
+    path_generation_file = path_generation + '/generation_interface_definition.txt'
+    file_macro = open(path_generation_file, 'wb', 1)
     file_macro.write(macro_definition)
     file_macro.close()
+
+    os.system('open -a Xcode %s' % path_generation_file)  # 打开生成目录
 
     print '完成APIManager的生成操作'
 

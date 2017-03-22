@@ -1,6 +1,1 @@
-URL: washMall/washingmaster/video/getList Name: 查询视频组列表 APIManager: MasterVedioGetList Interface: MASTER_VEDIO_GET_LIST
-URL: washMall/washingmaster/video/getDetail Name: 查看视频详情 APIManager: MasterVedioGetDetail Interface: MASTER_VEDIO_GET_DETAIL
-URL: washMall/washingmaster/video/like Name: 视频点赞 APIManager: MasterVedioLike Interface: MASTER_VEDIO_LIKE
-URL: washMall/washingmaster/consultation/getList Name: 活动资讯列表 APIManager: MasterNewsGetList Interface: MASTER_NEWS_GET_LIST
-URL: washMall/washingmaster/story/getList Name: 大师故事 APIManager: MasterStoryGetList Interface: MASTER_STORY_GET_LIST
-URL: washMall/app/getBannerList Name: 获取滚动的banner APIManager: MasterGetBannerList Interface: MASTER_GET_BANNER_LIST
+URL: moonMall-gateway/user/quickLogin Name: 快速登录 APIManager: QuickLogin Interface: QUICK_LOGIN
