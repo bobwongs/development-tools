@@ -13,6 +13,7 @@ import sys
 import time
 import getpass
 import getopt
+import re
 
 # ---------- Help ----------
 
@@ -119,19 +120,22 @@ dir_name = 'APIManager'
 
 # ---------- Function ----------
 def getTuple(line):
-    # URL
     find_words_url = 'URL: '
-    url = line[line.find(find_words_url)+len(find_words_url) : line.find(' Name: ')]
-    # Name
     find_words_name = 'Name: '
-    name = line[line.find(find_words_name)+len(find_words_name) : line.find(' APIManager: ')]
-    # APIManager
     find_words_api_manager = 'APIManager: '
-    api_manager = line[line.find(find_words_api_manager)+len(find_words_api_manager) : line.find(' Interface: ')]
-    # Interface
     find_words_interface = 'Interface: '
-    interface = line[line.find(find_words_interface)+len(find_words_interface) : line.find('\n')]
+    regex = r'%s|%s|%s|%s|\n' % (find_words_url, find_words_name, find_words_api_manager, find_words_interface)  # 这种方式可以解决，最后一行没有“\n”换行符的时候，少截取一个字符的问题
+    array = re.split(regex, line)
+    for item in array:
+        if item.strip() =='':
+            array.remove(item)
+
+    url = stripSpace(array[0])
+    name = stripSpace(array[1])
+    api_manager = stripSpace(array[2])
+    interface = stripSpace(array[3])
     return (url, name, api_manager, interface)
+
 
 # 创建APIManager，并且返回接口宏定义的代码
 def createAPIManager(source):
