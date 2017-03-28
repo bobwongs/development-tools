@@ -1601,7 +1601,7 @@
                 </viewController>
                 <customObject id="NfI-PL-AnB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="1274.5"/>
+            <point key="canvasLocation" x="736" y="1258"/>
         </scene>
         <!--MVCGenerator-->
         <scene sceneID="CGh-PZ-sbk">
