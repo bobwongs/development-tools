@@ -109,7 +109,7 @@ date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符�
 time_string = time.strftime("%Y%m%d%H%M%S")
 
 
-path_generation = 'Generation'
+#path_generation = 'Generation'
 path_generation_api_manager = path_generation + '/APIManager'
 
 date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
@@ -137,7 +137,7 @@ def getTuple(line):
 def createAPIManager(source):
     (url, name, api_manager, interface) = getTuple(source)
     
-    dir_path = path_generation_api_manager + '/' + dir_name
+    dir_path = path_module
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
 
@@ -208,8 +208,27 @@ def createAPIManager(source):
 
 # ------------ Main -------------
 def main():
+    # 文件判断和创建
+    hasDirectory(path_source_dir)
+    hasFile(path_source_file)
+    
+    hasDirectory(path_generation_history)
+    hasFile(path_generation_file)
+    
+    # 有旧目录
+    if os.path.exists(path_generation_temp):
+        print 'Directory ' + path_generation_temp + ' exits!'
+        print 'Move Old ' + path_generation_temp + ' to History!\n'
+        path_last = path_generation_history + '/%s' % (time_string)
+        hasDirectory(path_last)
+        shutil.move(path_generation_temp,path_last)  # 移动
+    
+    # 创建目录
+    hasDirectory(path_generation_temp)
+    os.mkdir(path_module)
+    
     # 读取文件
-    file = open(path_source_dir + '/source.txt', 'r')  # 这里使用相对路径
+    file = open(path_source_file, 'r')  # 这里使用相对路径
     array_line = file.readlines()
     file.close()
 
@@ -218,12 +237,15 @@ def main():
         macro = createAPIManager(line)
         macro_definition = '%s%s\n' % (macro_definition, macro)
 
-    file_macro = open(path_generation + '/generation_interface_definition.txt', 'wb', 1)
+    path_generation_txt_file = path_generation + '/generation_interface_definition.txt'
+    file_macro = open(path_generation_txt_file, 'wb', 1)
     file_macro.write(macro_definition)
     file_macro.close()
 
     print '完成APIManager的生成操作'
 
+    os.system('open %s' % path_generation_temp)  # 打开生成目录
+    os.system('open %s' % path_generation_txt_file)  # 打开生成的txt文件
 
 # ------------ Execute Main -------------
 if __name__=='__main__':

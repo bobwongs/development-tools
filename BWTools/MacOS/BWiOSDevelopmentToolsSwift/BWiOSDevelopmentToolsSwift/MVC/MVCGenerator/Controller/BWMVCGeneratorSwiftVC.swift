@@ -1,14 +1,15 @@
 //
-//  BWAPIManagerGeneratorVC.swift
+//  BWMVCGeneratorSwiftVC.swift
 //  BWiOSDevelopmentToolsSwift
 //
-//  Created by BobWong on 2017/1/18.
+//  Created by BobWong on 2017/3/23.
 //  Copyright © 2017年 BobWongStudio. All rights reserved.
 //
 
 import Cocoa
 
-class BWAPIManagerGeneratorVC: NSViewController {
+class BWMVCGeneratorSwiftVC: NSViewController {
+
     // MARK: UI
     // --------------- Source ---------------
     @IBOutlet weak var copyrightTextField: NSTextField!
@@ -18,10 +19,10 @@ class BWAPIManagerGeneratorVC: NSViewController {
     @IBOutlet weak var importFileTextField: NSTextField!
     @IBOutlet weak var basicVCTextField: NSTextField!
     @IBOutlet weak var moduleTextField: NSTextField!
-    @IBOutlet weak var sourceScrollView: NSScrollView!
+    @IBOutlet weak var propertyTextField: NSScrollView!
     
     // --------------- Generation ---------------
-    @IBOutlet weak var generationScrollView: NSScrollView!
+    @IBOutlet weak var svGeneration: NSScrollView!
     
     // MARK: View Cycle
     override func viewDidLoad() {
@@ -39,34 +40,20 @@ class BWAPIManagerGeneratorVC: NSViewController {
     }
     
     // MARK: Action
-    @IBAction func resetAction(_ sender: Any) {
-        sourceTextView.string = ""
+    @IBAction func btnActionReset(_ sender: Any) {
+        tvMVCSource.string = ""
     }
     
-    @IBAction func generateAction(_ sender: Any) {
-        // Set the path parameters for source and generation directory
-        let source = sourceTextView.string
-        let functionDirectoryPath = "\(NSHomeDirectory())/Desktop/Generator/APIManager"
-        let sourceDirectoryPath = "\(functionDirectoryPath)/Source"
-        let generationDirectoryPath = "\(functionDirectoryPath)/Generation"
-        
-        let pathSource = "\(sourceDirectoryPath)/source.txt"
-        let pathGeneration = "\(generationDirectoryPath)/generation.txt"
-        
-        // If there not has file, create
-        if !hasDirectory(path: sourceDirectoryPath) { return }
-        if !hasFile(path: pathSource) { return }
-        
+    @IBAction func btnActionGenerate(_ sender: Any)
+    {
+        // Get value
         let copyRight = NSString(string: copyrightTextField.stringValue).length > 0 ? copyrightTextField.stringValue : "BobWongStudio"
         let projectName = NSString(string: projectTextField.stringValue).length > 0 ? projectTextField.stringValue : "BWProject"
         let authorName = NSString(string: authorTextField.stringValue).length > 0 ? authorTextField.stringValue : "BobWong"
         let prefixName = NSString(string: prefixTextField.stringValue).length > 0 ? prefixTextField.stringValue : "BW"
         let importFile = NSString(string: importFileTextField.stringValue).length > 0 ? importFileTextField.stringValue : "#import <UIKit/UIKit.h>"
         let basicVC = NSString(string: basicVCTextField.stringValue).length > 0 ? basicVCTextField.stringValue : "UIViewController"
-        let moduleName = NSString(string: moduleTextField.stringValue).length > 0 ? moduleTextField.stringValue : "APIManager"
-        
-        generationTextView.string = executePythonScript(scriptInBundle: "generator_api_mananger", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: ["-c", copyRight, "-p", projectName, "-a", authorName, "-P", prefixName, "-i", importFile, "-b", basicVC, "-m", moduleName])
-        
+        let moduleName = NSString(string: moduleTextField.stringValue).length > 0 ? moduleTextField.stringValue : "MVC"
         
         // Write data to cache
         let userDefaults = UserDefaults.standard
@@ -77,14 +64,17 @@ class BWAPIManagerGeneratorVC: NSViewController {
         userDefaults.setValue(importFile, forKey: kImportFile)
         userDefaults.setValue(basicVC, forKey: kBasicVC)
         userDefaults.setValue(moduleName, forKey: kModule)
+        
+        // Generate code
     }
     
     // MARK: Getter and Setter
-    var sourceTextView: NSTextView {
-        get { return sourceScrollView.contentView.documentView as! NSTextView }
+    var tvMVCSource: NSTextView {
+        get { return propertyTextField.contentView.documentView as! NSTextView }
     }
     
-    var generationTextView: NSTextView {
-        get { return generationScrollView.contentView.documentView as! NSTextView }
+    var tvGeneration: NSTextView {
+        get { return svGeneration.contentView.documentView as! NSTextView }
     }
+    
 }

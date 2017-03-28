@@ -1,1 +1,4 @@
-static NSString * const kBMServiceIdQuickLogin = @"kBMServiceIdQuickLogin";  // 快速登录
+#define INTERFACE_ACTIVITY_GET_RECOMMEND_LIST @"washMall/activity/getRecommendActivityList"  // 优惠活动推荐列表
+#define INTERFACE_ACTIVITY_GET_PRODUCT_LIST @"washMall/activity/getActivityProductList"  // 活动商品列表
+#define INTERFACE_COUPONS_GET_VALID_COUPON_LIST @"washMall/coupon/getValidCouponList"  // 可选优惠券列表
+#define INTERFACE_COUPONS_GET_COUPON_LIST @"washMall/coupon/getCouponList"  // 卡券包列表

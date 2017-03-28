@@ -194,7 +194,7 @@ def generateMVC(Source):
                          '\n' +
                          '@implementation %s\n' % vc_name +
                          '\n' +
-                         '#pragma mark - View Cycle\n' +
+                         '#pragma mark - Life Cycle\n' +
                          '\n' +
                          '- (void)viewDidLoad\n' +
                          '{\n' +

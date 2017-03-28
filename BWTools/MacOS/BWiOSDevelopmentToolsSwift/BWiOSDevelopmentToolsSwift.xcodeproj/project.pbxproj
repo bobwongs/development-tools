@@ -13,9 +13,9 @@
 		B463D2EE1E2F6CB30067D39B /* BWGlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2ED1E2F6CB30067D39B /* BWGlobalConfig.swift */; };
 		B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F11E2F6E360067D39B /* generator_api_mananger.py */; };
 		B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F31E2F6E360067D39B /* generator_mvc.py */; };
-		B463D2FA1E2F6E360067D39B /* source_all_mvc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F41E2F6E360067D39B /* source_all_mvc.txt */; };
 		B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */; };
-		B463D2FC1E2F6E360067D39B /* source_all_property_ui_oc.txt in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F71E2F6E360067D39B /* source_all_property_ui_oc.txt */; };
+		B49022E11E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49022E01E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift */; };
+		B49022E41E8373D8003B1525 /* BWSwiftTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49022E31E8373D8003B1525 /* BWSwiftTool.swift */; };
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
@@ -53,6 +53,9 @@
 		B463D2F41E2F6E360067D39B /* source_all_mvc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_mvc.txt; sourceTree = "<group>"; };
 		B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_property_ui_oc.py; sourceTree = "<group>"; };
 		B463D2F71E2F6E360067D39B /* source_all_property_ui_oc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = source_all_property_ui_oc.txt; sourceTree = "<group>"; };
+		B49022E01E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorSwiftVC.swift; sourceTree = "<group>"; };
+		B49022E31E8373D8003B1525 /* BWSwiftTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWSwiftTool.swift; sourceTree = "<group>"; };
+		B4A305CC1E8A5D03008341C1 /* api_manager_source_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_manager_source_all.txt; sourceTree = "<group>"; };
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			children = (
 				B463D2DE1E2F20AA0067D39B /* FileSystemTool */,
 				B463D2E01E2F20AA0067D39B /* ScriptTool */,
+				B49022E21E8373B7003B1525 /* SwiftTool */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B463D2F11E2F6E360067D39B /* generator_api_mananger.py */,
+				B4A305CC1E8A5D03008341C1 /* api_manager_source_all.txt */,
 			);
 			path = APIManagerGenerator;
 			sourceTree = "<group>";
@@ -201,6 +206,14 @@
 				B463D2DD1E2F20AA0067D39B /* Tool */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B49022E21E8373B7003B1525 /* SwiftTool */ = {
+			isa = PBXGroup;
+			children = (
+				B49022E31E8373D8003B1525 /* BWSwiftTool.swift */,
+			);
+			path = SwiftTool;
 			sourceTree = "<group>";
 		};
 		B4B81CD91E28C3FF005D6E0A = {
@@ -313,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */,
+				B49022E01E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -474,11 +488,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */,
-				B463D2FC1E2F6E360067D39B /* source_all_property_ui_oc.txt in Resources */,
 				B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
 				B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */,
-				B463D2FA1E2F6E360067D39B /* source_all_mvc.txt in Resources */,
 				B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +518,9 @@
 			files = (
 				B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */,
 				B463D2E21E2F20AA0067D39B /* BWFileSystemTool.swift in Sources */,
+				B49022E11E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift in Sources */,
 				B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */,
+				B49022E41E8373D8003B1525 /* BWSwiftTool.swift in Sources */,
 				B463D2E31E2F20AA0067D39B /* BWScriptTool.swift in Sources */,
 				B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */,
 				B463D2EB1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift in Sources */,
