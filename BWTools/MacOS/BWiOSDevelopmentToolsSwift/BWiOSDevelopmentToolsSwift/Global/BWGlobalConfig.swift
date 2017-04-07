@@ -15,3 +15,9 @@ let kPrefix = "kPrefix"
 let kImportFile = "kImportFile"
 let kBasicVC = "kBasicVC"
 let kModule = "kModule"
+
+let kAPIManagerImportFile = "kAPIManagerImportFile"
+let kBasicAPIManager = "kBasicAPIManager"
+let kAPIManagerModule = "kAPIManagerModule"
+
+

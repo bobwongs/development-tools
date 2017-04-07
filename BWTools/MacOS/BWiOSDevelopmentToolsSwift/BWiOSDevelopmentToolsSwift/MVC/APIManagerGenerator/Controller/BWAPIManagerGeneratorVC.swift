@@ -33,9 +33,9 @@ class BWAPIManagerGeneratorVC: NSViewController {
         if let project = userDefaults.value(forKey: kProject) { projectTextField.stringValue = project as! String }
         if let author = userDefaults.value(forKey: kAuthor) { authorTextField.stringValue = author as! String }
         if let prefix = userDefaults.value(forKey: kPrefix) { prefixTextField.stringValue = prefix as! String }
-        if let importFile = userDefaults.value(forKey: kImportFile) { importFileTextField.stringValue = importFile as! String }
-        if let basicVC = userDefaults.value(forKey: kBasicVC) { basicVCTextField.stringValue = basicVC as! String}
-        if let module = userDefaults.value(forKey: kModule) { moduleTextField.stringValue = module as! String }
+        if let importFile = userDefaults.value(forKey: kAPIManagerImportFile) { importFileTextField.stringValue = importFile as! String }
+        if let basicVC = userDefaults.value(forKey: kBasicAPIManager) { basicVCTextField.stringValue = basicVC as! String}
+        if let module = userDefaults.value(forKey: kAPIManagerModule) { moduleTextField.stringValue = module as! String }
     }
     
     // MARK: Action
@@ -74,9 +74,9 @@ class BWAPIManagerGeneratorVC: NSViewController {
         userDefaults.setValue(projectName, forKey: kProject)
         userDefaults.setValue(authorName, forKey: kAuthor)
         userDefaults.setValue(prefixName, forKey: kPrefix)
-        userDefaults.setValue(importFile, forKey: kImportFile)
-        userDefaults.setValue(basicVC, forKey: kBasicVC)
-        userDefaults.setValue(moduleName, forKey: kModule)
+        userDefaults.setValue(importFile, forKey: kAPIManagerImportFile)
+        userDefaults.setValue(basicVC, forKey: kBasicAPIManager)
+        userDefaults.setValue(moduleName, forKey: kAPIManagerModule)
     }
     
     // MARK: Getter and Setter

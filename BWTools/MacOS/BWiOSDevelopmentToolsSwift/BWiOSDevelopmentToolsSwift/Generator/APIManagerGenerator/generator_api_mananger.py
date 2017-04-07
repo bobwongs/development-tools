@@ -113,6 +113,7 @@ time_string = time.strftime("%Y%m%d%H%M%S")
 #path_generation = 'Generation'
 path_generation_api_manager = path_generation + '/APIManager'
 
+year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%Y/%m/%d")  # 获得当前日期，转换为字符串
 
 # 创建的APIManager文件目录名称，前者为从输入参数中获取，后者为定值
@@ -163,7 +164,7 @@ def createAPIManager(source):
                       '//  ' + project_name + '\n' +
                       '//\n' +
                       '//  Created by BobWong on '+ date_string + '.\n' +
-                      '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
+                      '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                       '//\n' +
                       '\n' +
                       '#import "' + base_class + '.h"\n' +
@@ -183,7 +184,7 @@ def createAPIManager(source):
                        '//  ' + project_name + '\n' +
                        '//\n' +
                        '//  Created by BobWong on '+ date_string + '.\n' +
-                       '//  Copyright © 2016年 ' + copyright_name + '. All rights reserved.\n' +
+                       '//  Copyright © %s年 %s. All rights reserved.\n' % (year_string, copyright_name) +
                        '\n' +
                        '#import "%s.h"\n' % api_manager_name +
                        '\n' +
@@ -249,7 +250,7 @@ def main():
     print '完成APIManager的生成操作'
 
     os.system('open %s' % path_generation_temp)  # 打开生成目录
-    os.system('open %s' % path_generation_txt_file)  # 打开生成的txt文件
+    os.system('open -a Xcode %s' % path_generation_txt_file)  # 用Xcode打开生成的txt文件
 
 # ------------ Execute Main -------------
 if __name__=='__main__':
