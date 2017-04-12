@@ -146,7 +146,7 @@ def createAPIManager(source):
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
 
-    api_manager_name = 'BW' + api_manager + 'APIManager' #目录名即为APIManager的类名
+    api_manager_name = prefix_name + api_manager + 'APIManager' #目录名即为APIManager的类名
     
     path_api_manager = '%s/%s' % (dir_path, api_manager_name)
     if os.path.exists(path_api_manager):
