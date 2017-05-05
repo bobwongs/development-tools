@@ -150,10 +150,10 @@ def createAPIManager(source):
 #                                  )
 
     # BMNetworkingConfiguration中的配置
-    macro_interface_definition = 'static NSString * const kBMServiceId%s = @"kBMServiceId%s";  // %s' % (api_manager, api_manager, name)
+#    macro_interface_definition = 'static NSString * const kBMServiceId%s = @"kBMServiceId%s";  // %s' % (api_manager, api_manager, name)
 
     # BMRequestGenerator中的签名方式
-#    macro_interface_definition = '[serviceIdentifier isEqualToString:kBMServiceId%s] ||' % api_manager
+    macro_interface_definition = '[serviceIdentifier isEqualToString:kBMServiceId%s] ||' % api_manager
 
     return macro_interface_definition
 # ---------- Function ----------

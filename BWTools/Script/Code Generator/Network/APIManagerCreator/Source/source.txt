@@ -1,4 +1,2 @@
-URL: washMall/activity/getRecommendActivityList Name: 优惠活动推荐列表 APIManager: ActivityGetRecommendList Interface: ACTIVITY_GET_RECOMMEND_LIST
-URL: washMall/activity/getActivityProductList Name: 活动商品列表 APIManager: ActivityGetProductList Interface: ACTIVITY_GET_PRODUCT_LIST
-URL: washMall/coupon/getValidCouponList Name: 可选优惠券列表 APIManager: CouponsGetValidCouponList Interface: COUPONS_GET_VALID_COUPON_LIST
-URL: washMall/coupon/getCouponList Name: 卡券包列表 APIManager: CouponsGetCouponList Interface: COUPONS_GET_COUPON_LIST
+URL: washingMaster/region/getRegionByLngLat Name: 根据经纬度查省市区 APIManager: RegionGetRegionByLngLat Interface: REGION_GET_REGION_BY_LNG_LAT
+URL: washingMaster/activity/getCouponFlag Name: 获取有效券标识 APIManager: ActivityGetCouponFlag Interface: ACTIVITY_GET_COUPON_FLAG

@@ -1,0 +1,19 @@
+source 'https://github.com/CocoaPods/Specs.git'
+# If the dependency's name has more than one, here should specify the source path, such as next line:
+# source 'https://github.com/Artsy/Specs.git'
+
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+target 'BWCocoaPodsUsage' do
+
+    pod 'Masonry', '1.0.2'
+    pod 'AFNetworking', '3.1.0'
+    pod 'MJRefresh', '3.1.12'
+    pod 'MJExtension', '3.0.13'
+
+end
+
+# pod install vs pod update
+# pod install: install local version dependency, if there is no the version, only download it.
+# pod update: update dependency if there is newer version.
