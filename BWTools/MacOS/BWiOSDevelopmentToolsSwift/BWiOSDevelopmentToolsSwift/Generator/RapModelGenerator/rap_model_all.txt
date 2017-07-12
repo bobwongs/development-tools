@@ -1,1 +1,43 @@
 
+Income
+
+BMIncome Module:
+
+
+IncomeMine
+anticipatedIncome	预计收益	number	@mock=0
+hasAccount	是否绑定账户	boolean	@mock=false
+nameAuthStatus	实名认证状态	string	@mock=0
+nameAuthStatusName	实名认证状态名称	string	@mock=0
+totalIncome	累计收益(分)	number	@mock=0
+
+
+IncomeTotalDetail
+account	发放账号	string	@mock=12345423
+billId	收益发放单id	string	@mock=432323
+income	领取收益（分）	number	@mock=10
+issuerTime	收益发放成功时间	number	@mock=1492656355327
+
+
+IncomeDetail
+createOrderTime	下单时间	number	@mock=1492656355327
+income	收益(分)	number	@mock=10
+itemName	商品名称	string	@mock=商品名称
+nickname	购买者的昵称	string	@mock=小不点
+num	商品数量	number	@mock=1
+statusName	收益状态名称（已发放）	string	@mock=已发放
+
+
+IncomePredictedDetail
+createOrderTime	下单时间	number	@mock=1492656355327
+income	收益(分)	number	@mock=10
+itemName	商品名称	string	@mock=商品名称
+nickname	购买者的昵称	string	@mock=小不点
+num	商品数量	number	@mock=1
+statusName	收益状态名称（预计）	string	@mock=已发放
+
+
+
+User Info
+
+UserBindingAccount

@@ -55,6 +55,13 @@ def hasFile(path):
         file = open(path, 'wb', 1)
         file.close()
 
+# 判断文本中是否存在跟字典Key值相同的文本
+def hasDictKeyInText(text, dict):
+    for key in dict.keys():
+        if key in text:
+            return True
+    return False
+
 # ---------- Parameters Setting ----------
 
 # Basic
@@ -112,35 +119,36 @@ year_string = time.strftime('%Y')  # 获得当前年份
 date_string = time.strftime("%y/%m/%d")  # 获得当前日期，转换为字符串
 time_string = time.strftime("%Y%m%d%H%M%S")
 
-# ---------- Function Definition ----------
-
-def getTuple(line):
-    
+'''
+    数据源示例：
+    anticipatedIncome	预计收益	number	@mock=0
+    hasAccount	是否绑定账户	boolean	@mock=false
     '''
-        数据源示例：
-        anticipatedIncome	预计收益	number	@mock=0
-        hasAccount	是否绑定账户	boolean	@mock=false
-    '''
-    
-    type_dict = {'number': '@property (assign, nonatomic) NSInteger ',
+        
+rap_type_dict = {'number': '@property (assign, nonatomic) NSInteger ',
                 'boolean': '@property (assign, nonatomic) BOOL ',
                 'string': '@property (strong, nonatomic) NSString *',
                 'object': '@property (strong, nonatomic) ModelClass *',
                 'array': '@property (strong, nonatomic) NSArray *'}
+
+# ---------- Function Definition ----------
+
+def getTuple(line):
     
     line = line.strip()
     array = re.split(r'\s*', line)  # 通过空格进行分割，获得需要的Model数据
     print array
     name = array[0]
     description = array[1]
-    type = type_dict[array[2]]
+    type = rap_type_dict[array[2]]
     line_string = '%s%s;  ///< %s' % (type, name, description)
 
     return line_string
 
 # 创建VC
 def generateFile(source_array, model_name):
-    path_generation_model_dir = '%s/%s' % (path_generation_temp, model_name)
+    model_full_name = '%s%sModel' % (prefix_name, model_name)
+    path_generation_model_dir = '%s/%s' % (path_generation_type, model_full_name)
     os.mkdir(path_generation_model_dir)
     
     generation_code = '\n'
@@ -148,7 +156,7 @@ def generateFile(source_array, model_name):
         line_string = getTuple(item)
         generation_code = '%s%s\n' % (generation_code, line_string)
     
-    file_name = '%s%s' % (prefix_name, model_name)
+    file_name = model_full_name
 
     # vc头文件.h
     file_vc_header = open('%s/%s.h' % (path_generation_model_dir, file_name), 'wb', 1)
@@ -226,7 +234,7 @@ def main():
 
     # 创建目录
     hasDirectory(path_generation_temp)
-#    os.mkdir(path_generation_type)
+    os.mkdir(path_generation_type)
 
 
     dict_all_models = {}
@@ -235,7 +243,7 @@ def main():
     for text in array_line:
         text = text.strip()
         if isBlank(text) != True:
-            if "@mock" in text:
+            if "@mock" in text or hasDictKeyInText(text, rap_type_dict):
                 array_model_source.append(text)
             else:
                 if len(array_model_source) == 0:
