@@ -24,6 +24,9 @@
 		B4B81D611E28C71D005D6E0A /* BWMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D421E28C71D005D6E0A /* BWMainVC.swift */; };
 		B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */; };
 		B4B81D631E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */; };
+		B4CC3F461F15C17500C15E74 /* generator_rap_model.py in Resources */ = {isa = PBXBuildFile; fileRef = B4CC3F441F15C17500C15E74 /* generator_rap_model.py */; };
+		B4CC3F471F15C17500C15E74 /* rap_model_all.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4CC3F451F15C17500C15E74 /* rap_model_all.txt */; };
+		B4CC3F4C1F15C24900C15E74 /* BWRapModelGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC3F4B1F15C24900C15E74 /* BWRapModelGeneratorVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		B4B81D421E28C71D005D6E0A /* BWMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMainVC.swift; sourceTree = "<group>"; };
 		B4B81D471E28C71D005D6E0A /* BWMVCGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorVC.swift; sourceTree = "<group>"; };
 		B4B81D4C1E28C71D005D6E0A /* BWUIPropertyGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWUIPropertyGeneratorVC.swift; sourceTree = "<group>"; };
+		B4CC3F441F15C17500C15E74 /* generator_rap_model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_rap_model.py; sourceTree = "<group>"; };
+		B4CC3F451F15C17500C15E74 /* rap_model_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rap_model_all.txt; sourceTree = "<group>"; };
+		B4CC3F4B1F15C24900C15E74 /* BWRapModelGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWRapModelGeneratorVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 				B463D2F21E2F6E360067D39B /* MVCGenerator */,
 				B463D2F51E2F6E360067D39B /* UIPropertyGenerator */,
 				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
+				B4CC3F431F15C17500C15E74 /* RapModelGenerator */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 				B4B81D451E28C71D005D6E0A /* MVCGenerator */,
 				B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */,
 				B463D2E61E2F6BA80067D39B /* APIManagerGenerator */,
+				B4CC3F481F15C19000C15E74 /* RapModelGenerator */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -375,6 +383,23 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B4CC3F431F15C17500C15E74 /* RapModelGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B4CC3F441F15C17500C15E74 /* generator_rap_model.py */,
+				B4CC3F451F15C17500C15E74 /* rap_model_all.txt */,
+			);
+			path = RapModelGenerator;
+			sourceTree = "<group>";
+		};
+		B4CC3F481F15C19000C15E74 /* RapModelGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B4CC3F4B1F15C24900C15E74 /* BWRapModelGeneratorVC.swift */,
+			);
+			path = RapModelGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,7 +512,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CC3F461F15C17500C15E74 /* generator_rap_model.py in Resources */,
 				B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */,
+				B4CC3F471F15C17500C15E74 /* rap_model_all.txt in Resources */,
 				B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
 				B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */,
@@ -518,6 +545,7 @@
 			files = (
 				B4B81D621E28C71D005D6E0A /* BWMVCGeneratorVC.swift in Sources */,
 				B463D2E21E2F20AA0067D39B /* BWFileSystemTool.swift in Sources */,
+				B4CC3F4C1F15C24900C15E74 /* BWRapModelGeneratorVC.swift in Sources */,
 				B49022E11E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift in Sources */,
 				B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */,
 				B49022E41E8373D8003B1525 /* BWSwiftTool.swift in Sources */,

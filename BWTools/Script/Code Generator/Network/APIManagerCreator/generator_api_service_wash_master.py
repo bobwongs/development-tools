@@ -143,17 +143,17 @@ def createAPIManager(source):
 #    macro_interface_definition = '#import "BMService%s.h"' % api_manager
 
     # BMServiceFactory中的生成方法
-#    macro_interface_definition = (
-#                                 'if ([serviceIdentifier isEqualToString:kBMServiceId%s]) {\n' % api_manager +
-#                                 '    return [[BMService%s alloc] init];\n' % api_manager +
-#                                 '}'
-#                                  )
+    macro_interface_definition = (
+                                 'if ([serviceIdentifier isEqualToString:kBMServiceId%s]) {\n' % api_manager +
+                                 '    return [[BMService%s alloc] init];\n' % api_manager +
+                                 '}'
+                                  )
 
     # BMNetworkingConfiguration中的配置
 #    macro_interface_definition = 'static NSString * const kBMServiceId%s = @"kBMServiceId%s";  // %s' % (api_manager, api_manager, name)
 
     # BMRequestGenerator中的签名方式
-    macro_interface_definition = '[serviceIdentifier isEqualToString:kBMServiceId%s] ||' % api_manager
+#    macro_interface_definition = '[serviceIdentifier isEqualToString:kBMServiceId%s] ||' % api_manager
 
     return macro_interface_definition
 # ---------- Function ----------

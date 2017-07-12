@@ -1,2 +1,3 @@
-[serviceIdentifier isEqualToString:kBMServiceIdRegionGetRegionByLngLat] ||
-[serviceIdentifier isEqualToString:kBMServiceIdActivityGetCouponFlag] ||
+if ([serviceIdentifier isEqualToString:kBMServiceIdActivityGetProductList]) {
+    return [[BMServiceActivityGetProductList alloc] init];
+}

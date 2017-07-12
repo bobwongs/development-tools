@@ -1,2 +1,1 @@
-URL: washingMaster/region/getRegionByLngLat Name: 根据经纬度查省市区 APIManager: RegionGetRegionByLngLat Interface: REGION_GET_REGION_BY_LNG_LAT
-URL: washingMaster/activity/getCouponFlag Name: 获取有效券标识 APIManager: ActivityGetCouponFlag Interface: ACTIVITY_GET_COUPON_FLAG
+URL: washingMaster/activity/getActivityProductList Name: 活动商品列表 APIManager: ActivityGetProductList Interface: ACTIVITY_GET_PRODUCT_LIST
