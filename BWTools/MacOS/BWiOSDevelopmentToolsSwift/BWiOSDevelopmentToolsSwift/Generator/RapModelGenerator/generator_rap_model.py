@@ -139,16 +139,19 @@ def getTuple(line):
     return line_string
 
 # 创建VC
-def generateFile(source_array):
+def generateFile(source_array, model_name):
+    path_generation_model_dir = '%s/%s' % (path_generation_temp, model_name)
+    os.mkdir(path_generation_model_dir)
+    
     generation_code = '\n'
     for item in source_array:
         line_string = getTuple(item)
         generation_code = '%s%s\n' % (generation_code, line_string)
     
-    file_name = '%s%s' % (prefix_name, module_name)
+    file_name = '%s%s' % (prefix_name, model_name)
 
     # vc头文件.h
-    file_vc_header = open('%s/%s.h' % (path_generation_type, file_name), 'wb', 1)
+    file_vc_header = open('%s/%s.h' % (path_generation_model_dir, file_name), 'wb', 1)
     content_header = (
                       '//\n' +
                       '//  %s.h\n' % (file_name) +
@@ -168,7 +171,7 @@ def generateFile(source_array):
     file_vc_header.close()
 
     # vc实现文件.m
-    file_vc_implement = open('%s/%s.m' % (path_generation_type, file_name), 'wb', 1)
+    file_vc_implement = open('%s/%s.m' % (path_generation_model_dir, file_name), 'wb', 1)
     content_implement = (
                          '//\n' +
                          '//  %s.m\n' % (file_name) +
@@ -223,10 +226,30 @@ def main():
 
     # 创建目录
     hasDirectory(path_generation_temp)
-    os.mkdir(path_generation_type)
+#    os.mkdir(path_generation_type)
 
-    # 创建文件
-    generateFile(array_line)
+
+    dict_all_models = {}
+    array_model_source = []
+    dict_key = ''
+    for text in array_line:
+        text = text.strip()
+        if isBlank(text) != True:
+            if "@mock" in text:
+                array_model_source.append(text)
+            else:
+                if len(array_model_source) == 0:
+                    dict_key = text
+                    continue
+                else:
+                    dict_all_models[dict_key] = array_model_source
+                    array_model_source = []
+                    dict_key = text  # 两处都需要对Key值进行赋值
+
+    dict_all_models[dict_key] = array_model_source
+
+    for (key, value) in dict_all_models.items():
+        generateFile(value, key)  # key即为Model名，创建文件
 
     text_success = 'Rap Model Generation Finished'
     file_generation = open(path_generation_file, 'wb', 1)
