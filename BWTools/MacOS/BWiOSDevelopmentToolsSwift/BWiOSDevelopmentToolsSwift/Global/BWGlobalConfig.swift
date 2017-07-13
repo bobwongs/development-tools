@@ -21,3 +21,7 @@ let kBasicAPIManager = "kBasicAPIManager"
 let kAPIManagerModule = "kAPIManagerModule"
 
 
+let kRapModelImportFile = "kRapModelImportFile"
+let kRapModelBasic = "kRapModelBasic"
+let kRapModelModule = "kRapModelModule"
+

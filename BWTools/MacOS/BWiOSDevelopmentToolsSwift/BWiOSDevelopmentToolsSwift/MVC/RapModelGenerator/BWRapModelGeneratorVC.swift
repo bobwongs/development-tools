@@ -34,9 +34,9 @@ class BWRapModelGeneratorVC: NSViewController {
         if let project = userDefaults.value(forKey: kProject) { tfProject.stringValue = project as! String }
         if let author = userDefaults.value(forKey: kAuthor) { tfAuthor.stringValue = author as! String }
         if let prefix = userDefaults.value(forKey: kPrefix) { tfPrefix.stringValue = prefix as! String }
-        if let importFile = userDefaults.value(forKey: kImportFile) { tfImportFile.stringValue = importFile as! String }
-        if let basicVC = userDefaults.value(forKey: kBasicVC) { tfBasicVC.stringValue = basicVC as! String}
-        if let module = userDefaults.value(forKey: kModule) { tfModule.stringValue = module as! String }
+        if let importFile = userDefaults.value(forKey: kRapModelImportFile) { tfImportFile.stringValue = importFile as! String }
+        if let basicVC = userDefaults.value(forKey: kRapModelBasic) { tfBasicVC.stringValue = basicVC as! String}
+        if let module = userDefaults.value(forKey: kRapModelModule) { tfModule.stringValue = module as! String }
     }
     
     // MARK: Action
@@ -76,9 +76,9 @@ class BWRapModelGeneratorVC: NSViewController {
         userDefaults.setValue(projectName, forKey: kProject)
         userDefaults.setValue(authorName, forKey: kAuthor)
         userDefaults.setValue(prefixName, forKey: kPrefix)
-        userDefaults.setValue(importFile, forKey: kImportFile)
-        userDefaults.setValue(basicVC, forKey: kBasicVC)
-        userDefaults.setValue(moduleName, forKey: kModule)
+        userDefaults.setValue(importFile, forKey: kRapModelImportFile)
+        userDefaults.setValue(basicVC, forKey: kRapModelBasic)
+        userDefaults.setValue(moduleName, forKey: kRapModelModule)
     }
     
     // MARK: Getter and Setter

@@ -14,6 +14,8 @@ totalIncome	累计收益(分)	number	@mock=0
 
 IncomeTotalDetail
 account	发放账号	string	@mock=12345423
+accountType	账户类型，枚举：accountType	string
+accountTypeName	账户类型名称	string
 billId	收益发放单id	string	@mock=432323
 income	领取收益（分）	number	@mock=10
 issuerTime	收益发放成功时间	number	@mock=1492656355327
@@ -41,3 +43,21 @@ statusName	收益状态名称（预计）	string	@mock=已发放
 User Info
 
 UserBindingAccount
+account	账号/卡号	string	@mock=123456
+accountId	账户id	string	@mock=12
+accountName	开户银行名称	string	@mock=工行
+accountType	账户类型，枚举：accountType	string	@mock=alipay
+accountTypeName	账户类型名称	string
+defaultFlag	是否默认收款账号（0：否；1：是）	string	@mock=0
+
+
+UserAuthInfo
+auditRejectionReason	不通过原因（审核不通过有值）	string	@mock=拒绝
+cardBack	身份证反面（审核不通过有值）	object
+cardFront	身份证正面（审核不通过有值）	object
+cardId	身份证号	string	@mock=1487223877324000
+name	真实姓名	string	@mock=小王
+status	审核状态(0:审核不通过;1:审核通过;2:待审核)	string	@mock=1
+statusName	审核状态名称	string
+
+
