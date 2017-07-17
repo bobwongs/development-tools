@@ -199,14 +199,6 @@ def generateFile(source_array, model_name):
     file_vc_implement.write(content_implement)
     file_vc_implement.close()
 
-    # 占坑文件，暂不需要
-#    file_model = open('%s/%s' % (path_model, name_model), 'wb', 1)
-#    file_model.close()
-#
-#    file_view = open('%s/%s' % (path_view, name_view), 'wb', 1)
-#    file_view.close()
-
-
 # ---------- Main ----------
 
 def main():

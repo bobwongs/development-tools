@@ -173,9 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				B463D2F21E2F6E360067D39B /* MVCGenerator */,
-				B463D2F51E2F6E360067D39B /* UIPropertyGenerator */,
-				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
 				B4CC3F431F15C17500C15E74 /* RapModelGenerator */,
+				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
+				B463D2F51E2F6E360067D39B /* UIPropertyGenerator */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -281,9 +281,9 @@
 			children = (
 				B4B81D401E28C71D005D6E0A /* Main */,
 				B4B81D451E28C71D005D6E0A /* MVCGenerator */,
-				B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */,
-				B463D2E61E2F6BA80067D39B /* APIManagerGenerator */,
 				B4CC3F481F15C19000C15E74 /* RapModelGenerator */,
+				B463D2E61E2F6BA80067D39B /* APIManagerGenerator */,
+				B4B81D4A1E28C71D005D6E0A /* UIPropertyGenerator */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
