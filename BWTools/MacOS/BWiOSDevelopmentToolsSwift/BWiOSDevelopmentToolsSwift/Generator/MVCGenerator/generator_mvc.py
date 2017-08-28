@@ -163,9 +163,7 @@ def generateMVC(Source):
                       '\n' +
                       '%s\n' % (import_file) +
                       '\n' +
-                      '/**\n' +
-                      ' * %s\n' % comment +
-                      ' */\n' +
+                      '/** %s */\n' % comment +
                       '@interface %s : %s\n' % (vc_name, base_vc) +
                       '\n' +
                       '@end\n'
@@ -186,7 +184,7 @@ def generateMVC(Source):
                          '\n' +
                          '#import "%s.h"\n' % vc_name +
                          '\n' +
-                         '@interface %s () <#<>#>\n' % (vc_name) +
+                         '@interface %s () <<#Protocol#>>\n' % (vc_name) +
                          '\n' +
                          '<#Code#>\n' +
                          '\n' +
