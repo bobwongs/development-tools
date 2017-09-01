@@ -194,8 +194,7 @@ def generateMVC(Source):
                          '\n' +
                          '#pragma mark - Life Cycle\n' +
                          '\n' +
-                         '- (void)viewDidLoad\n' +
-                         '{\n' +
+                         '- (void)viewDidLoad {\n' +
                          '    [super viewDidLoad];\n' +
                          '    \n' +
                          '    self.title = @"%s";\n' % title +
@@ -218,23 +217,19 @@ def generateMVC(Source):
                          '\n' +
                          '#pragma mark - Private Method\n' +
                          '\n' +
-                         '- (void)setData\n' +
-                         '{\n' +
+                         '- (void)setData {\n' +
                          '    <#Code#>\n' +
                          '}\n' +
                          '\n' +
-                         '- (void)setUI\n' +
-                         '{\n' +
+                         '- (void)setUI {\n' +
                          '    <#Code#>\n' +
                          '}\n' +
                          '\n' +
-                         '- (void)setConstraints\n' +
-                         '{\n' +
+                         '- (void)setConstraints {\n' +
                          '    <#Code#>\n' +
                          '}\n' +
                          '\n' +
-                         '- (void)loadData\n' +
-                         '{\n' +
+                         '- (void)loadData {\n' +
                          '    <#Code#>\n' +
                          '}\n' +
                          '\n' +

@@ -129,7 +129,9 @@ rap_type_dict = {'number': '@property (assign, nonatomic) NSInteger ',
                 'boolean': '@property (assign, nonatomic) BOOL ',
                 'string': '@property (strong, nonatomic) NSString *',
                 'object': '@property (strong, nonatomic) ModelClass *',
-                'array': '@property (strong, nonatomic) NSArray *'}
+                'array': '@property (strong, nonatomic) NSArray *',
+                'array<string>': '@property (strong, nonatomic) NSArray *',
+                'array<object>': '@property (strong, nonatomic) NSArray *'}
 
 # ---------- Function Definition ----------
 

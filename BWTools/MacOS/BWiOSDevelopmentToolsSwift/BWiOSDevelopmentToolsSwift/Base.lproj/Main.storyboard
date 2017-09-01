@@ -1660,12 +1660,12 @@ URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 A
                                 <rect key="frame" x="22" y="302" width="681" height="136"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" id="skm-xm-2z0">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">BWModelNameOne
+                                    <string key="title">ModelNameOne
 anticipatedIncome	预计收益	number	@mock=0
 hasAccount	是否绑定账户	boolean	@mock=false
 nameAuthStatus	实名认证状态	string	@mock=0
 
-BWModelNameTwo
+ModelNameTwo
 nameAuthStatusName	实名认证状态名称	string	@mock=0
 totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1713,7 +1713,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Xw-lCO">
-                                <rect key="frame" x="142" y="568" width="200" height="22"/>
+                                <rect key="frame" x="142" y="568" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SRr-c0-nNE">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1721,7 +1721,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-Fa-sVx">
-                                <rect key="frame" x="142" y="535" width="200" height="22"/>
+                                <rect key="frame" x="142" y="535" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yWB-2w-oxB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1729,7 +1729,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA3-wB-ICQ">
-                                <rect key="frame" x="142" y="501" width="200" height="22"/>
+                                <rect key="frame" x="142" y="501" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SIB-jd-1xp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1745,7 +1745,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-WR-p4A">
-                                <rect key="frame" x="152" y="469" width="190" height="22"/>
+                                <rect key="frame" x="152" y="469" width="247" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="feF-EQ-ObL">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1753,15 +1753,15 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-E2-DX7">
-                                <rect key="frame" x="368" y="504" width="134" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Basic ViewController:" id="fD5-QX-0SN">
+                                <rect key="frame" x="425" y="504" width="77" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Basic Class:" id="fD5-QX-0SN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5w-KN-1Ei">
-                                <rect key="frame" x="368" y="537" width="82" height="17"/>
+                                <rect key="frame" x="425" y="537" width="82" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Prefix Name:" id="nTU-lT-O70">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1780,7 +1780,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-WH-dHP">
-                                <rect key="frame" x="464" y="534" width="223" height="22"/>
+                                <rect key="frame" x="521" y="534" width="166" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dMo-v0-Lhn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1788,7 +1788,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GH-Y0-o8o">
-                                <rect key="frame" x="368" y="570" width="90" height="17"/>
+                                <rect key="frame" x="425" y="570" width="90" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project Name:" id="fRa-CI-wmM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1796,7 +1796,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXu-YW-yZ8">
-                                <rect key="frame" x="464" y="568" width="223" height="22"/>
+                                <rect key="frame" x="521" y="568" width="166" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h2x-LM-NT7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
