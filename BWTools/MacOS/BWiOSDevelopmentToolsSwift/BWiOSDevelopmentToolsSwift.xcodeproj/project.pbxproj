@@ -16,6 +16,7 @@
 		B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */ = {isa = PBXBuildFile; fileRef = B463D2F61E2F6E360067D39B /* generator_property_ui_oc.py */; };
 		B49022E11E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49022E01E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift */; };
 		B49022E41E8373D8003B1525 /* BWSwiftTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49022E31E8373D8003B1525 /* BWSwiftTool.swift */; };
+		B4B42FC61F7B5371000D8D72 /* template_generator.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B42FC51F7B5371000D8D72 /* template_generator.py */; };
 		B4B81CE61E28C3FF005D6E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */; };
 		B4B81CEA1E28C3FF005D6E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */; };
 		B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B81CEB1E28C3FF005D6E0A /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		B49022E01E836E68003B1525 /* BWMVCGeneratorSwiftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWMVCGeneratorSwiftVC.swift; sourceTree = "<group>"; };
 		B49022E31E8373D8003B1525 /* BWSwiftTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWSwiftTool.swift; sourceTree = "<group>"; };
 		B4A305CC1E8A5D03008341C1 /* api_manager_source_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_manager_source_all.txt; sourceTree = "<group>"; };
+		B4B42FC51F7B5371000D8D72 /* template_generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = template_generator.py; sourceTree = "<group>"; };
 		B4B81CE21E28C3FF005D6E0A /* BWiOSDevelopmentToolsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWiOSDevelopmentToolsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B81CE51E28C3FF005D6E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B81CE91E28C3FF005D6E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		B463D2EF1E2F6E360067D39B /* Generator */ = {
 			isa = PBXGroup;
 			children = (
+				B4B42FC41F7B521D000D8D72 /* TemplateGenerator */,
 				B463D2F21E2F6E360067D39B /* MVCGenerator */,
 				B4CC3F431F15C17500C15E74 /* RapModelGenerator */,
 				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
@@ -221,6 +224,14 @@
 				B49022E31E8373D8003B1525 /* BWSwiftTool.swift */,
 			);
 			path = SwiftTool;
+			sourceTree = "<group>";
+		};
+		B4B42FC41F7B521D000D8D72 /* TemplateGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B4B42FC51F7B5371000D8D72 /* template_generator.py */,
+			);
+			path = TemplateGenerator;
 			sourceTree = "<group>";
 		};
 		B4B81CD91E28C3FF005D6E0A = {
@@ -518,6 +529,7 @@
 				B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
 				B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */,
+				B4B42FC61F7B5371000D8D72 /* template_generator.py in Resources */,
 				B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
