@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43380F62100885800EAA37B /* generator_css_class.py in Resources */ = {isa = PBXBuildFile; fileRef = B43380F42100885700EAA37B /* generator_css_class.py */; };
+		B43380F72100885800EAA37B /* generator_css_class.txt in Resources */ = {isa = PBXBuildFile; fileRef = B43380F52100885700EAA37B /* generator_css_class.txt */; };
 		B463D2E21E2F20AA0067D39B /* BWFileSystemTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */; };
 		B463D2E31E2F20AA0067D39B /* BWScriptTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */; };
 		B463D2EB1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463D2EA1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B43380F42100885700EAA37B /* generator_css_class.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = generator_css_class.py; sourceTree = "<group>"; };
+		B43380F52100885700EAA37B /* generator_css_class.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = generator_css_class.txt; sourceTree = "<group>"; };
 		B463D2DF1E2F20AA0067D39B /* BWFileSystemTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWFileSystemTool.swift; sourceTree = "<group>"; };
 		B463D2E11E2F20AA0067D39B /* BWScriptTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWScriptTool.swift; sourceTree = "<group>"; };
 		B463D2EA1E2F6BF20067D39B /* BWAPIManagerGeneratorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWAPIManagerGeneratorVC.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B43380F32100885700EAA37B /* CSSClassGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B43380F42100885700EAA37B /* generator_css_class.py */,
+				B43380F52100885700EAA37B /* generator_css_class.txt */,
+			);
+			path = CSSClassGenerator;
+			sourceTree = "<group>";
+		};
 		B463D2DD1E2F20AA0067D39B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 				B4CC3F431F15C17500C15E74 /* RapModelGenerator */,
 				B463D2F01E2F6E360067D39B /* APIManagerGenerator */,
 				B463D2F51E2F6E360067D39B /* UIPropertyGenerator */,
+				B43380F32100885700EAA37B /* CSSClassGenerator */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -528,6 +542,8 @@
 				B4CC3F471F15C17500C15E74 /* rap_model_all.txt in Resources */,
 				B463D2FB1E2F6E360067D39B /* generator_property_ui_oc.py in Resources */,
 				B4B81CED1E28C3FF005D6E0A /* Main.storyboard in Resources */,
+				B43380F72100885800EAA37B /* generator_css_class.txt in Resources */,
+				B43380F62100885800EAA37B /* generator_css_class.py in Resources */,
 				B463D2F81E2F6E360067D39B /* generator_api_mananger.py in Resources */,
 				B4B42FC61F7B5371000D8D72 /* template_generator.py in Resources */,
 				B463D2F91E2F6E360067D39B /* generator_mvc.py in Resources */,
