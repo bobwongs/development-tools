@@ -46,7 +46,7 @@ func executeScript(scriptPath: String, sourcePath: String, generationPath: Strin
     
     let fileHandle = outputPipe.fileHandleForReading
     let output = NSString.init(data: fileHandle.readDataToEndOfFile(), encoding: String.Encoding.utf8.rawValue)
-    print("Output is \(output)")
+    print("Output is \(String(describing: output))")
     
     
     // ------------ Write the result ------------
