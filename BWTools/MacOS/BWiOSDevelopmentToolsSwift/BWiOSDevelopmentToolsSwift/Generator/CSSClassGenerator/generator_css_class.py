@@ -51,12 +51,15 @@ def getNames(string):
         startTag = 'class="'
         endTag = '"'
         if string.find(startTag) < 0:
-            return ''
+            return []
+
     startIndex = string.find(startTag)+len(startTag)
     subString = string[startIndex : len(string)]
     endIndex = startIndex + subString.find(endTag)
     name = string[startIndex : endIndex]
-    return name
+    array = getNames(string[endIndex:])
+    array.insert(0, name)
+    return array
 
 def generateUnitCode(name):
     code = '.%s {\n  \n}\n' % (name)
@@ -72,9 +75,10 @@ def generateTemplateCode():
     array_names = []
     for line in array_line:
         if line.strip() =='': continue  # 非空判断
-        name = getNames(line)
-        if name != '':
-            array_names.append(name)
+        unit_names = getNames(line)
+        if len(unit_names) != 0:
+            for name in unit_names:
+                array_names.append(name)
     
     template_code = ''
     for name in array_names:
