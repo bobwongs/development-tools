@@ -1,0 +1,28 @@
+<!--pages/invoice/invoice.wxml-->
+<view class='list'>
+<view class='list-item' wx:for="{{}}"></view>
+<view class='header'>{{}}月</view>
+<block wx:for="{{}}">
+<view class='sublist-item'>
+<image class='item-selection' /><!-- 待使用组件  -->
+<view class='payment-money'>{{}}元</view>
+<view class='sublist-item-right'>
+<view class='sublist-item-time'>{{}}</view>
+<view class='sublist-item-address'>{{}}</view>
+<view class='sublist-item-count'>共 {{}} 件</view>
+</view>
+</view>
+</block>
+</view>
+
+<view class='bottom'>
+<view class='select-all'>
+<image class='sele' />
+</view>
+<view class='bottom-middle'>
+<view class='selected-count'>已选 {{}} 单</view>
+<view class='selected-total-money'>共 {{}} 元</view>
+</view>
+<view class='next-button'>下一步</view>
+</view>
+

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="cVk-Bc-kck">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="cVk-Bc-kck">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -660,7 +659,7 @@
                     </connections>
                 </application>
             </objects>
-            <point key="canvasLocation" x="79" y="-492"/>
+            <point key="canvasLocation" x="78" y="-561"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="sFU-lV-38o">
@@ -671,6 +670,9 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="320" y="834" width="252" height="108"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="cVk-Bc-kck" id="Z49-MU-kkQ"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="Jni-Ly-jP3"/>
@@ -678,7 +680,7 @@
                 </windowController>
                 <customObject id="joq-Ka-7ij" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-344"/>
+            <point key="canvasLocation" x="54" y="-413"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="hIz-AP-VOD">
@@ -686,11 +688,11 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="XfG-lQ-9wD" customClass="BWMainVC" customModule="BWiOSDevelopmentToolsSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="385" height="301"/>
+                        <rect key="frame" x="0.0" y="0.0" width="385" height="328"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-RD-pl1">
-                                <rect key="frame" x="142" y="246" width="102" height="19"/>
+                                <rect key="frame" x="142" y="273" width="102" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="MVC Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obk-qO-5wI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -700,7 +702,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-xM-tP8">
-                                <rect key="frame" x="130" y="118" width="139" height="19"/>
+                                <rect key="frame" x="130" y="145" width="139" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="UI Property Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tAd-fi-MPD">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -710,7 +712,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lDQ-9F-vkN">
-                                <rect key="frame" x="122" y="161" width="143" height="19"/>
+                                <rect key="frame" x="122" y="188" width="143" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="APIManager Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P9Q-Wl-RrU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -720,14 +722,14 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-d0-AHI">
-                                <rect key="frame" x="138" y="47" width="110" height="19"/>
+                                <rect key="frame" x="138" y="74" width="110" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="Verify Certificate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nco-tM-qa5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-Sk-ivC">
-                                <rect key="frame" x="130" y="203" width="135" height="19"/>
+                                <rect key="frame" x="130" y="230" width="135" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="Rap Model Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vkt-F8-dop">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
@@ -737,11 +739,21 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hya-TN-SKc">
-                                <rect key="frame" x="154" y="81" width="78" height="19"/>
+                                <rect key="frame" x="154" y="108" width="78" height="19"/>
                                 <buttonCell key="cell" type="roundRect" title="Xcodebuild" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aug-16-zcg">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-cJ-xsA">
+                                <rect key="frame" x="131" y="36" width="133" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="CSS Class Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fxl-iD-bso">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="Hav-TW-4tQ" kind="show" id="Xl6-R9-j80"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -749,6 +761,7 @@
                             <constraint firstItem="hya-TN-SKc" firstAttribute="centerX" secondItem="kbi-d0-AHI" secondAttribute="centerX" id="3xi-ox-uDG"/>
                             <constraint firstItem="hya-TN-SKc" firstAttribute="top" secondItem="BBL-xM-tP8" secondAttribute="bottom" constant="19" id="64Q-c7-Qiz"/>
                             <constraint firstItem="BBL-xM-tP8" firstAttribute="top" secondItem="lDQ-9F-vkN" secondAttribute="bottom" constant="25" id="9S1-FB-XQS"/>
+                            <constraint firstItem="4wM-cJ-xsA" firstAttribute="top" secondItem="kbi-d0-AHI" secondAttribute="bottom" constant="20" id="B0r-Ub-lDb"/>
                             <constraint firstItem="dB6-Sk-ivC" firstAttribute="top" secondItem="Tsx-RD-pl1" secondAttribute="bottom" constant="25" id="Ffh-NU-HQo"/>
                             <constraint firstItem="dB6-Sk-ivC" firstAttribute="leading" secondItem="BBL-xM-tP8" secondAttribute="leading" id="KVi-1q-asT"/>
                             <constraint firstItem="lDQ-9F-vkN" firstAttribute="centerX" secondItem="hya-TN-SKc" secondAttribute="centerX" id="LRt-Mh-FJe"/>
@@ -756,12 +769,13 @@
                             <constraint firstItem="Tsx-RD-pl1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="36" id="YNx-Di-a53"/>
                             <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="lDQ-9F-vkN" secondAttribute="centerX" id="Zu2-5P-ebm"/>
                             <constraint firstItem="kbi-d0-AHI" firstAttribute="top" secondItem="hya-TN-SKc" secondAttribute="bottom" constant="16" id="hD7-Ss-nJX"/>
+                            <constraint firstItem="4wM-cJ-xsA" firstAttribute="centerX" secondItem="dB6-Sk-ivC" secondAttribute="centerX" id="rd0-7r-vil"/>
                             <constraint firstItem="dB6-Sk-ivC" firstAttribute="trailing" secondItem="lDQ-9F-vkN" secondAttribute="trailing" id="w1Q-vz-lj8"/>
                         </constraints>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="55.5" y="69.5"/>
+            <point key="canvasLocation" x="55.5" y="-37"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="uGc-rY-O8e">
@@ -772,6 +786,9 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="387" y="781" width="218" height="98"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="aFw-QD-Swj" id="6Fc-kM-zqD"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="anv-NM-e6l" kind="relationship" relationship="window.shadowedContentViewController" id="i9T-Iy-I52"/>
@@ -788,8 +805,11 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="9bg-mW-iDL">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="280" y="740" width="250" height="91"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <rect key="contentRect" x="280" y="740" width="249" height="91"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="epd-yL-eKo" id="FQq-fi-h3P"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="NtU-rS-LNJ" kind="relationship" relationship="window.shadowedContentViewController" id="0lt-Cc-ZYg"/>
@@ -797,7 +817,7 @@
                 </windowController>
                 <customObject id="9ad-pL-2h4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528" y="554"/>
+            <point key="canvasLocation" x="-528.5" y="541.5"/>
         </scene>
         <!--MVCGenerator-->
         <scene sceneID="xx3-MP-5Je">
@@ -813,7 +833,7 @@
                                     <rect key="frame" x="1" y="1" width="667" height="118"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="m4M-zC-CIP">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="m4M-zC-CIP">
                                             <rect key="frame" x="0.0" y="0.0" width="667" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -956,7 +976,7 @@ VCComment: The class comment to the ViewController</string>
                                     <action selector="btnActionReset:" target="anv-NM-e6l" id="zHZ-Gn-Jtg"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51Z-AE-KbV">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="51Z-AE-KbV">
                                 <rect key="frame" x="144" y="624" width="211" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="vyl-vO-r42">
                                     <font key="font" metaFont="system"/>
@@ -964,7 +984,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-Zw-X1i">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-Zw-X1i">
                                 <rect key="frame" x="144" y="591" width="211" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="kxS-OP-ymL">
                                     <font key="font" metaFont="system"/>
@@ -972,7 +992,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-l8-hNy">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-l8-hNy">
                                 <rect key="frame" x="144" y="557" width="211" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Ks9-0v-sEV">
                                     <font key="font" metaFont="system"/>
@@ -988,7 +1008,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-6o-ofQ">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-6o-ofQ">
                                 <rect key="frame" x="154" y="525" width="201" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gDx-Or-MbL">
                                     <font key="font" metaFont="system"/>
@@ -1002,7 +1022,7 @@ VCComment: The class comment to the ViewController</string>
                                     <rect key="frame" x="1" y="1" width="665" height="118"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Xjb-e7-0Rk">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Xjb-e7-0Rk">
                                             <rect key="frame" x="0.0" y="-1" width="665" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1038,7 +1058,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orD-S4-q1m">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="orD-S4-q1m">
                                 <rect key="frame" x="509" y="558" width="189" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="iip-1i-Db1"/>
@@ -1049,7 +1069,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-m0-Qdo">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-m0-Qdo">
                                 <rect key="frame" x="465" y="591" width="233" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="9yq-WI-nFz">
                                     <font key="font" metaFont="system"/>
@@ -1065,7 +1085,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-IL-gLD">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-IL-gLD">
                                 <rect key="frame" x="465" y="625" width="233" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LFm-GP-yA1">
                                     <font key="font" metaFont="system"/>
@@ -1170,7 +1190,7 @@ VCComment: The class comment to the ViewController</string>
                                     <rect key="frame" x="1" y="1" width="506" height="118"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="PUz-B1-VuJ">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="PUz-B1-VuJ">
                                             <rect key="frame" x="0.0" y="0.0" width="506" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1235,7 +1255,7 @@ VCComment: The class comment to the ViewController</string>
                                     <rect key="frame" x="1" y="1" width="506" height="510"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Vu2-I5-V1b">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Vu2-I5-V1b">
                                             <rect key="frame" x="0.0" y="-1" width="506" height="510"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1295,6 +1315,9 @@ VCComment: The class comment to the ViewController</string>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="425" y="461" width="232" height="91"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="J01-KK-TI8" id="sbX-QZ-JMg"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="qQQ-Yk-giu" kind="relationship" relationship="window.shadowedContentViewController" id="fLu-Qc-pjt"/>
@@ -1376,7 +1399,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-BJ-Ebz">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-BJ-Ebz">
                                 <rect key="frame" x="154" y="763" width="237" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dlJ-l6-K4W">
                                     <font key="font" metaFont="system"/>
@@ -1384,7 +1407,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05l-zr-bCV">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="05l-zr-bCV">
                                 <rect key="frame" x="480" y="696" width="194" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Lhy-sS-kf3">
                                     <font key="font" metaFont="system"/>
@@ -1392,7 +1415,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-BS-Qg7">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-BS-Qg7">
                                 <rect key="frame" x="154" y="730" width="237" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="iYU-Ra-j1Y">
                                     <font key="font" metaFont="system"/>
@@ -1400,7 +1423,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bac-lv-niI">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bac-lv-niI">
                                 <rect key="frame" x="154" y="696" width="237" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="8gf-wJ-lCm">
                                     <font key="font" metaFont="system"/>
@@ -1408,7 +1431,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-05-1EG">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-05-1EG">
                                 <rect key="frame" x="493" y="729" width="181" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gfv-kj-bsA">
                                     <font key="font" metaFont="system"/>
@@ -1424,7 +1447,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HY-G9-FOb">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0HY-G9-FOb">
                                 <rect key="frame" x="154" y="664" width="237" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mOp-Dk-VC8">
                                     <font key="font" metaFont="system"/>
@@ -1440,7 +1463,7 @@ VCComment: The class comment to the ViewController</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-Yc-sY7">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-Yc-sY7">
                                 <rect key="frame" x="493" y="763" width="181" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="181" id="Ez2-Oj-193"/>
@@ -1490,7 +1513,7 @@ URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 A
                                     <rect key="frame" x="1" y="1" width="652" height="243"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eXJ-jb-X0l">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eXJ-jb-X0l">
                                             <rect key="frame" x="0.0" y="-1" width="652" height="243"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1516,7 +1539,7 @@ URL: washMall/appointment/getExpressCompanyList Name: 获取快递公司列表 A
                                     <rect key="frame" x="1" y="1" width="651" height="118"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Ogm-Lo-0GG">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Ogm-Lo-0GG">
                                             <rect key="frame" x="0.0" y="0.0" width="651" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1712,7 +1735,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Xw-lCO">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Xw-lCO">
                                 <rect key="frame" x="142" y="568" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SRr-c0-nNE">
                                     <font key="font" metaFont="system"/>
@@ -1720,7 +1743,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-Fa-sVx">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-Fa-sVx">
                                 <rect key="frame" x="142" y="535" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yWB-2w-oxB">
                                     <font key="font" metaFont="system"/>
@@ -1728,7 +1751,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA3-wB-ICQ">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bA3-wB-ICQ">
                                 <rect key="frame" x="142" y="501" width="257" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SIB-jd-1xp">
                                     <font key="font" metaFont="system"/>
@@ -1744,7 +1767,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-WR-p4A">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-WR-p4A">
                                 <rect key="frame" x="152" y="469" width="247" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="feF-EQ-ObL">
                                     <font key="font" metaFont="system"/>
@@ -1768,7 +1791,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu1-ib-6iG">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bu1-ib-6iG">
                                 <rect key="frame" x="508" y="501" width="179" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="ARQ-UK-0pj"/>
@@ -1779,7 +1802,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-WH-dHP">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-WH-dHP">
                                 <rect key="frame" x="521" y="534" width="166" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dMo-v0-Lhn">
                                     <font key="font" metaFont="system"/>
@@ -1795,7 +1818,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXu-YW-yZ8">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eXu-YW-yZ8">
                                 <rect key="frame" x="521" y="568" width="166" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h2x-LM-NT7">
                                     <font key="font" metaFont="system"/>
@@ -1809,7 +1832,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <rect key="frame" x="1" y="1" width="667" height="67"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="wK9-BA-W4d">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="wK9-BA-W4d">
                                             <rect key="frame" x="0.0" y="0.0" width="667" height="67"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1879,7 +1902,7 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                                     <rect key="frame" x="1" y="1" width="665" height="118"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uOA-Ch-06z">
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uOA-Ch-06z">
                                             <rect key="frame" x="0.0" y="-1" width="665" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1997,6 +2020,9 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="681" y="615" width="224" height="116"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="r3M-wl-XlG" id="sTX-K5-fYR"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="mO2-Zt-w7V" kind="relationship" relationship="window.shadowedContentViewController" id="5ZD-id-f8S"/>
@@ -2005,6 +2031,157 @@ totalIncome	累计收益(分)	number	@mock=0</string>
                 <customObject id="ttt-OY-QFa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965" y="563"/>
+        </scene>
+        <!--UI Property Generator-->
+        <scene sceneID="98o-cB-hE3">
+            <objects>
+                <viewController title="UI Property Generator" id="pwR-tP-vge" customClass="BWCSSClassGeneratorVC" customModule="BWiOSDevelopmentToolsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ESe-QU-ywa">
+                        <rect key="frame" x="0.0" y="0.0" width="548" height="743"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0f-ei-4dE">
+                                <rect key="frame" x="20" y="589" width="508" height="120"/>
+                                <clipView key="contentView" id="30e-AI-YKv">
+                                    <rect key="frame" x="1" y="1" width="506" height="118"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="YtY-rE-Oik">
+                                            <rect key="frame" x="0.0" y="0.0" width="506" height="118"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="506" height="118"/>
+                                            <size key="maxSize" width="666" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="fT4-8f-QLU">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h0G-0c-ITz">
+                                    <rect key="frame" x="491" y="1" width="16" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-ol-nTm">
+                                <rect key="frame" x="462" y="562" width="66" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Generate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="68j-Ja-bwm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnActionGenerate:" target="pwR-tP-vge" id="Yen-QG-Vth"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ems-2Z-b8o">
+                                <rect key="frame" x="394" y="562" width="47" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="Reset" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g8o-Mv-X3g">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnActionReset:" target="pwR-tP-vge" id="abP-x4-l8b"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QUF-hb-Pyq">
+                                <rect key="frame" x="18" y="712" width="48" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="uaf-zz-agk"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source:" id="9zX-Pu-ZvO">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edn-81-Yen">
+                                <rect key="frame" x="18" y="540" width="70" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Generation:" id="7Dg-07-yZc">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkk-33-grq">
+                                <rect key="frame" x="20" y="20" width="508" height="512"/>
+                                <clipView key="contentView" id="xbk-Lc-MIt">
+                                    <rect key="frame" x="1" y="1" width="506" height="510"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="EDT-kc-uBc">
+                                            <rect key="frame" x="0.0" y="-1" width="506" height="510"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="506" height="510"/>
+                                            <size key="maxSize" width="666" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="BOV-FX-qLs">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5aD-c1-aoK">
+                                    <rect key="frame" x="491" y="1" width="16" height="510"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QUF-hb-Pyq" firstAttribute="leading" secondItem="ESe-QU-ywa" secondAttribute="leading" constant="20" symbolic="YES" id="3R0-wk-KrX"/>
+                            <constraint firstItem="ems-2Z-b8o" firstAttribute="top" secondItem="s0f-ei-4dE" secondAttribute="bottom" constant="8" symbolic="YES" id="Aye-ic-rgQ"/>
+                            <constraint firstItem="ems-2Z-b8o" firstAttribute="top" secondItem="ESe-QU-ywa" secondAttribute="top" constant="162" id="BPx-sh-BUB"/>
+                            <constraint firstItem="IGA-ol-nTm" firstAttribute="baseline" secondItem="ems-2Z-b8o" secondAttribute="firstBaseline" id="CL1-01-TbN"/>
+                            <constraint firstItem="ems-2Z-b8o" firstAttribute="baseline" secondItem="IGA-ol-nTm" secondAttribute="baseline" id="VJ6-Kr-uhX"/>
+                            <constraint firstItem="QUF-hb-Pyq" firstAttribute="leading" secondItem="s0f-ei-4dE" secondAttribute="leading" id="WVI-Ys-Lot"/>
+                            <constraint firstAttribute="bottom" secondItem="pkk-33-grq" secondAttribute="bottom" constant="20" symbolic="YES" id="Wg5-Sh-GTK"/>
+                            <constraint firstItem="pkk-33-grq" firstAttribute="top" secondItem="edn-81-Yen" secondAttribute="bottom" constant="8" symbolic="YES" id="YaI-v4-FKW"/>
+                            <constraint firstItem="IGA-ol-nTm" firstAttribute="trailing" secondItem="pkk-33-grq" secondAttribute="trailing" id="bN0-jD-lVb"/>
+                            <constraint firstItem="QUF-hb-Pyq" firstAttribute="top" secondItem="ESe-QU-ywa" secondAttribute="top" constant="14" id="fM7-PW-Oke"/>
+                            <constraint firstItem="pkk-33-grq" firstAttribute="top" secondItem="ems-2Z-b8o" secondAttribute="bottom" constant="31" id="fN0-df-dkU"/>
+                            <constraint firstAttribute="trailing" secondItem="s0f-ei-4dE" secondAttribute="trailing" constant="20" symbolic="YES" id="gUe-gH-J8Z"/>
+                            <constraint firstItem="s0f-ei-4dE" firstAttribute="leading" secondItem="edn-81-Yen" secondAttribute="leading" id="gz3-ln-aNL"/>
+                            <constraint firstItem="s0f-ei-4dE" firstAttribute="trailing" secondItem="IGA-ol-nTm" secondAttribute="trailing" id="k2T-8h-5KY"/>
+                            <constraint firstItem="edn-81-Yen" firstAttribute="leading" secondItem="pkk-33-grq" secondAttribute="leading" id="sFm-Aa-rrk"/>
+                            <constraint firstItem="IGA-ol-nTm" firstAttribute="leading" secondItem="ems-2Z-b8o" secondAttribute="trailing" constant="21" id="toQ-5s-A97"/>
+                            <constraint firstItem="edn-81-Yen" firstAttribute="top" secondItem="s0f-ei-4dE" secondAttribute="bottom" constant="32" id="veo-ou-5JY"/>
+                            <constraint firstItem="s0f-ei-4dE" firstAttribute="top" secondItem="QUF-hb-Pyq" secondAttribute="bottom" constant="3" id="yfz-8p-5tV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="svGeneration" destination="pkk-33-grq" id="oOj-Cj-xh7"/>
+                        <outlet property="svProperty" destination="s0f-ei-4dE" id="yl8-8Q-CE5"/>
+                    </connections>
+                </viewController>
+                <customObject id="icZ-P3-JvJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="1200"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="EUN-I5-fbx">
+            <objects>
+                <windowController id="Hav-TW-4tQ" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6mS-x3-O8p">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="280" y="740" width="249" height="91"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="Hav-TW-4tQ" id="kzz-Z7-20R"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="pwR-tP-vge" kind="relationship" relationship="window.shadowedContentViewController" id="umh-D4-tqZ"/>
+                    </connections>
+                </windowController>
+                <customObject id="otx-WF-5rI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="564"/>
         </scene>
     </scenes>
 </document>
