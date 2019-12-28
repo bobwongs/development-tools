@@ -65,7 +65,7 @@ class BWAPIManagerGeneratorVC: NSViewController {
         let basicVC = NSString(string: basicVCTextField.stringValue).length > 0 ? basicVCTextField.stringValue : "UIViewController"
         let moduleName = NSString(string: moduleTextField.stringValue).length > 0 ? moduleTextField.stringValue : "APIManager"
         
-        generationTextView.string = executePythonScript(scriptInBundle: "generator_api_mananger", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: ["-c", copyRight, "-p", projectName, "-a", authorName, "-P", prefixName, "-i", importFile, "-b", basicVC, "-m", moduleName])
+        generationTextView.string = executePythonScript(scriptInBundle: "generator_api_mananger", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: ["-c", copyRight, "-p", projectName, "-a", authorName, "-P", prefixName, "-i", importFile, "-b", basicVC, "-m", moduleName]) ?? ""
         
         
         // Write data to cache
