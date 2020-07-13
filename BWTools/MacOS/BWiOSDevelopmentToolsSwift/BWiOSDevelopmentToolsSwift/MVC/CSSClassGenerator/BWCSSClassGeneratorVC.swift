@@ -37,7 +37,7 @@ class BWCSSClassGeneratorVC: NSViewController {
         if !hasFile(path: pathSource) { return }
         if !hasFile(path: pathGeneration) { }
         
-        tvGeneration.string = executePythonScript(scriptInBundle: "generator_css_class", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: [])
+        tvGeneration.string = executePythonScript(scriptInBundle: "generator_css_class", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: []) ?? ""
     }
     
     

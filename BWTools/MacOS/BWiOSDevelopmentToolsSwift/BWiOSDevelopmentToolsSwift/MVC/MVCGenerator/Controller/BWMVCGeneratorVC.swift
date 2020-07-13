@@ -67,7 +67,7 @@ class BWMVCGeneratorVC: NSViewController {
         let basicVC = NSString(string: tfBasicVC.stringValue).length > 0 ? tfBasicVC.stringValue : "UIViewController"
         let moduleName = NSString(string: tfModule.stringValue).length > 0 ? tfModule.stringValue : "MVC"
         
-        tvGeneration.string = executePythonScript(scriptInBundle: "generator_mvc", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: ["-c", copyRight, "-p", projectName, "-a", authorName, "-P", prefixName, "-i", importFile, "-b", basicVC, "-m", moduleName])
+        tvGeneration.string = executePythonScript(scriptInBundle: "generator_mvc", sourcePath: pathSource, generationPath: pathGeneration, source: source, argumentsExceptPath: ["-c", copyRight, "-p", projectName, "-a", authorName, "-P", prefixName, "-i", importFile, "-b", basicVC, "-m", moduleName]) ?? ""
         
         
         // Write data to cache
