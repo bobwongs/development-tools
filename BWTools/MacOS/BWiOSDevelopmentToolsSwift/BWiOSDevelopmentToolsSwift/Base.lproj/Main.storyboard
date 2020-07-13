@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="cVk-Bc-kck">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="cVk-Bc-kck">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -690,86 +690,146 @@
                         <rect key="frame" x="0.0" y="0.0" width="385" height="328"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-RD-pl1">
-                                <rect key="frame" x="142" y="273" width="102" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="MVC Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obk-qO-5wI">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="aFw-QD-Swj" kind="show" id="raK-86-jb4"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-xM-tP8">
-                                <rect key="frame" x="129" y="145" width="139" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="UI Property Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tAd-fi-MPD">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="epd-yL-eKo" kind="show" id="qEN-rG-NCW"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lDQ-9F-vkN">
-                                <rect key="frame" x="121" y="188" width="143" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="APIManager Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P9Q-Wl-RrU">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="J01-KK-TI8" kind="show" id="d9H-7d-KT9"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-d0-AHI">
-                                <rect key="frame" x="138" y="74" width="110" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="Verify Certificate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nco-tM-qa5">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-Sk-ivC">
-                                <rect key="frame" x="129" y="230" width="135" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="Rap Model Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vkt-F8-dop">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="r3M-wl-XlG" kind="show" id="gaZ-3N-iTD"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hya-TN-SKc">
-                                <rect key="frame" x="154" y="108" width="78" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="Xcodebuild" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aug-16-zcg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-cJ-xsA">
-                                <rect key="frame" x="130" y="36" width="133" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="CSS Class Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fxl-iD-bso">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="Hav-TW-4tQ" kind="show" id="Xl6-R9-j80"/>
-                                </connections>
-                            </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1fw-7f-leH">
+                                <rect key="frame" x="0.0" y="25" width="197" height="278"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qbk-zB-9Ad">
+                                        <rect key="frame" x="85" y="262" width="26" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="iOS" id="HhH-Wh-8Ma">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="21" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-UE-EHM">
+                                        <rect key="frame" x="22.5" y="13" width="143" height="213"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-RD-pl1">
+                                                <rect key="frame" x="21" y="194" width="102" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="MVC Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obk-qO-5wI">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="aFw-QD-Swj" kind="show" id="raK-86-jb4"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-Sk-ivC">
+                                                <rect key="frame" x="4" y="155" width="135" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="Rap Model Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vkt-F8-dop">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="r3M-wl-XlG" kind="show" id="gaZ-3N-iTD"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lDQ-9F-vkN">
+                                                <rect key="frame" x="0.0" y="116" width="143" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="APIManager Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P9Q-Wl-RrU">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="J01-KK-TI8" kind="show" id="d9H-7d-KT9"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-xM-tP8">
+                                                <rect key="frame" x="2" y="77" width="139" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="UI Property Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tAd-fi-MPD">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="epd-yL-eKo" kind="show" id="qEN-rG-NCW"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hya-TN-SKc">
+                                                <rect key="frame" x="33" y="38" width="78" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="Xcodebuild" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aug-16-zcg">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-d0-AHI">
+                                                <rect key="frame" x="17" y="-1" width="110" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="Verify Certificate" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nco-tM-qa5">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qbk-zB-9Ad" firstAttribute="top" secondItem="1fw-7f-leH" secondAttribute="top" id="LAp-7I-5sn"/>
+                                    <constraint firstItem="Qbk-zB-9Ad" firstAttribute="centerX" secondItem="1fw-7f-leH" secondAttribute="centerX" id="WhE-jW-7ZT"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fKC-gj-Z22">
+                                <rect key="frame" x="207" y="25" width="178" height="278"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-19-ZbD">
+                                        <rect key="frame" x="19" y="117" width="133" height="18"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4wM-cJ-xsA">
+                                                <rect key="frame" x="0.0" y="-1" width="133" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="CSS Class Generator" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fxl-iD-bso">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="Hav-TW-4tQ" kind="show" id="Xl6-R9-j80"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hUo-F0-Nhz">
+                                        <rect key="frame" x="73" y="262" width="32" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Web" id="4DM-b5-giQ">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hUo-F0-Nhz" firstAttribute="centerX" secondItem="fKC-gj-Z22" secondAttribute="centerX" id="JOl-32-qcq"/>
+                                    <constraint firstItem="hUo-F0-Nhz" firstAttribute="top" secondItem="fKC-gj-Z22" secondAttribute="top" id="a3u-D7-nLI"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="lDQ-9F-vkN" firstAttribute="top" secondItem="dB6-Sk-ivC" secondAttribute="bottom" constant="24" id="2XF-9F-MqH"/>
-                            <constraint firstItem="hya-TN-SKc" firstAttribute="centerX" secondItem="kbi-d0-AHI" secondAttribute="centerX" id="3xi-ox-uDG"/>
-                            <constraint firstItem="hya-TN-SKc" firstAttribute="top" secondItem="BBL-xM-tP8" secondAttribute="bottom" constant="19" id="64Q-c7-Qiz"/>
-                            <constraint firstItem="BBL-xM-tP8" firstAttribute="top" secondItem="lDQ-9F-vkN" secondAttribute="bottom" constant="25" id="9S1-FB-XQS"/>
-                            <constraint firstItem="4wM-cJ-xsA" firstAttribute="top" secondItem="kbi-d0-AHI" secondAttribute="bottom" constant="20" id="B0r-Ub-lDb"/>
-                            <constraint firstItem="dB6-Sk-ivC" firstAttribute="top" secondItem="Tsx-RD-pl1" secondAttribute="bottom" constant="25" id="Ffh-NU-HQo"/>
-                            <constraint firstItem="dB6-Sk-ivC" firstAttribute="leading" secondItem="BBL-xM-tP8" secondAttribute="leading" id="KVi-1q-asT"/>
-                            <constraint firstItem="lDQ-9F-vkN" firstAttribute="centerX" secondItem="hya-TN-SKc" secondAttribute="centerX" id="LRt-Mh-FJe"/>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="PVU-Sz-kBa"/>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="36" id="YNx-Di-a53"/>
-                            <constraint firstItem="Tsx-RD-pl1" firstAttribute="centerX" secondItem="lDQ-9F-vkN" secondAttribute="centerX" id="Zu2-5P-ebm"/>
-                            <constraint firstItem="kbi-d0-AHI" firstAttribute="top" secondItem="hya-TN-SKc" secondAttribute="bottom" constant="16" id="hD7-Ss-nJX"/>
-                            <constraint firstItem="4wM-cJ-xsA" firstAttribute="centerX" secondItem="dB6-Sk-ivC" secondAttribute="centerX" id="rd0-7r-vil"/>
-                            <constraint firstItem="dB6-Sk-ivC" firstAttribute="trailing" secondItem="lDQ-9F-vkN" secondAttribute="trailing" id="w1Q-vz-lj8"/>
+                            <constraint firstItem="fKC-gj-Z22" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="Fkf-DW-g81"/>
+                            <constraint firstAttribute="bottom" secondItem="fKC-gj-Z22" secondAttribute="bottom" constant="25" id="GlY-P0-7ZE"/>
+                            <constraint firstItem="1fw-7f-leH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Iqs-vu-DoM"/>
+                            <constraint firstItem="fKC-gj-Z22" firstAttribute="leading" secondItem="1fw-7f-leH" secondAttribute="trailing" constant="10" id="N1g-u1-U0b"/>
+                            <constraint firstAttribute="bottom" secondItem="1fw-7f-leH" secondAttribute="bottom" constant="25" id="PQx-6s-Yyp"/>
+                            <constraint firstAttribute="trailing" secondItem="fKC-gj-Z22" secondAttribute="trailing" id="ReL-aV-Ate"/>
+                            <constraint firstItem="1fw-7f-leH" firstAttribute="width" secondItem="fKC-gj-Z22" secondAttribute="width" multiplier="1.10526" id="dP8-LH-fLr"/>
+                            <constraint firstItem="1fw-7f-leH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="xq0-e2-2vq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -885,7 +945,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-xV-EK3">
-                                <rect key="frame" x="24" y="476" width="309" height="16"/>
+                                <rect key="frame" x="24" y="476" width="310" height="16"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="VC: VCName Title: VCTitle Comment: VCComment" id="FIa-oS-5Lg">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
